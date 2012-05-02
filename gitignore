@@ -1,0 +1,7 @@
+*~
+*.pyc
+.emacs.desktop
+.emacs.desktop.lock
+TAGS
+.coverage
+.ropeproject

@@ -1,0 +1,94 @@
+#
+# Colorized prompt bash prompt with goodies
+# from https://github.com/bitprophet/dotfiles/blob/master/.bash_prompt
+#
+
+# Color codes
+RED='\[\033[01;31m\]'
+GREEN='\[\033[01;32m\]'
+YELLOW='\[\033[01;33m\]'
+BLUE='\[\033[01;34m\]'
+PURPLE='\[\033[01;35m\]'
+CYAN='\[\033[01;36m\]'
+WHITE='\[\033[01;37m\]'
+NIL='\[\033[00m\]'
+
+# Hostname styles
+FULL='\H'
+SHORT='\h'
+
+# System => color/hostname map:
+# UC: username color
+# LC: location/cwd color
+# HD: hostname display (\h vs \H)
+# Defaults:
+UC=$GREEN
+LC=$BLUE
+HD=$SHORT
+
+HOST=`hostname | cut -d '.' -f 1`
+DOMAIN=`hostname | cut -d '.' -f 2-`
+
+
+# Prompt function because PROMPT_COMMAND is awesome
+function set_prompt() {
+    host="${UC}${HD}${NIL}"
+
+    # Special vim-tab-like shortpath (~/folder/directory/foo => ~/f/d/foo)
+    _pwd=`pwd | sed "s#$HOME#~#"`
+    if [[ $_pwd == "~" ]]; then
+        _dirname=$_pwd
+    else
+        _dirname=`dirname "$_pwd" | sed -E "s/\/(.)[^\/]*/\/\1/g"`
+        if [[ $_dirname == "/" ]]; then
+            _dirname=""
+        fi
+        _dirname="$_dirname/`basename "$_pwd"`"
+    fi
+    path="${LC}${_dirname}${NIL}"
+
+    # Virtualenv
+    _venv=`basename "$VIRTUAL_ENV"`
+    venv="" # need this to clear it when we leave a venv
+    if [[ -n $_venv ]]; then
+        venv=" ${NIL}{${PURPLE}${_venv}${NIL}}"
+    fi
+
+    # Git branch / dirtiness
+    # Dirtiness cribbed from:
+    # http://henrik.nyh.se/2008/12/git-dirty-prompt#comment-8325834
+    if git update-index -q --refresh 2>/dev/null; git diff-index --quiet --cached HEAD --ignore-submodules -- 2>/dev/null && git diff-files --quiet --ignore-submodules 2>/dev/null
+        then dirty=""
+    else
+        dirty="${RED}*${NIL}"
+    fi
+    _branch=$(git symbolic-ref HEAD 2>/dev/null)
+    _branch=${_branch#refs/heads/} # apparently faster than sed
+    branch="" # need this to clear it when we leave a repo
+    if [[ -n $_branch ]]; then
+        branch=" ${NIL}[${PURPLE}${_branch}${dirty}${NIL}]"
+    fi
+
+    # Dollar/pound sign
+    end="\n${LC}\$${NIL} "
+
+    # Time (useful when catting logs)
+    time="[${GREEN}$(date +"%R")${NIL}]"
+
+    # user
+    user="${CYAN}${USER}${NIL}"
+
+    # If this is an xterm set the title to user@host:dir
+    case "$TERM" in
+    xterm*|rxvt*)
+        title="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]"
+        ;;
+    *)
+	title=""
+        ;;
+    esac
+
+    # Put it all together
+    export PS1="${title}\n${time} ${user}@${host}:${path}${branch}${venv} ${end}"
+}
+export PROMPT_COMMAND=set_prompt

@@ -1,0 +1,19 @@
+[user]
+	name = Carl Meyer
+	email = carl@oddbird.net
+	signingkey = carl@oddbird.net
+
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	di = diff
+	dc = diff --cached
+
+[core]
+	excludesfile = ~/dot/gitignore
+[color]
+	ui = true
+[push]
+	default = tracking

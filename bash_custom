@@ -1,0 +1,23 @@
+umask 002
+export EDITOR=/usr/bin/emacsclient
+export PAGER=most
+
+export PIP_DOWNLOAD_CACHE=~/.pip/cache
+
+. `which pycompletion`
+
+export WORKON_HOME=$HOME/.venvs
+export PROJECT_HOME=$HOME/projects
+source /usr/local/bin/virtualenvwrapper.sh
+
+mktags() {
+    PWD=`pwd`
+    SP=`virtualenvwrapper_get_site_packages_dir`
+    find $PWD $SP -name '*.py' | etags -
+}
+
+source ~/dot/bash_prompt
+
+export HISTCONTROL=ignoreboth
+export HISTSIZE=100000
+export HISTFILESIZE=100000
