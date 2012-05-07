@@ -1,0 +1,7 @@
+~$
+\.orig$
+\.pyc$
+/\#.*\#$
+/\.\#
+\.emacs\.desktop
+TAGS$

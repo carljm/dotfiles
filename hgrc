@@ -1,0 +1,42 @@
+[ui]
+username = Carl Meyer <carl@oddbird.net>
+merge = emacsmerge.sh
+ignore = ~/dot/hgignore
+
+[auth]
+bitbucket.prefix = bitbucket.org
+bitbucket.username = carljm
+
+[alias]
+since = log --template '{rev} {desc|firstline}\n' -r tip:0 -P
+slog = log --style=/home/carljm/dot/hgext/mercurial-cli-templates/map-cmdline.slog
+nlog = log --style=/home/carljm/dot/hgext/mercurial-cli-templates/map-cmdline.nlog
+sglog = glog --style=/home/carljm/dot/hgext/mercurial-cli-templates/map-cmdline.sglog
+dlog = log --style=/home/carljm/dot/hgext/mercurial-cli-templates/map-cmdline.dlog
+nudge = push --rev .
+qstatus = status --rev qparent
+
+[extensions]
+churn =
+graphlog =
+convert =
+record =
+mq =
+fetch =
+gpg =
+rebase = 
+color =
+transplant =
+hgk =
+pager =
+progress = 
+
+[diff]
+git = True
+
+[pager]
+pager = LESS='FSRX' less
+attend = log, glog, slog, nlog, dlog, sglog, diff, qdiff, annotate
+
+[gpg]
+key = carl@dirtcircle.com

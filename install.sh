@@ -5,7 +5,7 @@ if [ ! -f "$HOME/dot/install.sh" ]; then
   exit 1
 fi
 
-for fn in gitconfig screenrc emacs.d bash_aliases; do
+for fn in gitconfig screenrc emacs.d bash_aliases hgrc; do
   src="$HOME/dot/${fn}"
   dest="$HOME/.${fn}"
   if [ -e $dest ]; then
