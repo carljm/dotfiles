@@ -9,10 +9,10 @@ bitbucket.username = carljm
 
 [alias]
 since = log --template '{rev} {desc|firstline}\n' -r tip:0 -P
-slog = log --style=/home/carljm/dot/hgext/mercurial-cli-templates/map-cmdline.slog
-nlog = log --style=/home/carljm/dot/hgext/mercurial-cli-templates/map-cmdline.nlog
-sglog = glog --style=/home/carljm/dot/hgext/mercurial-cli-templates/map-cmdline.sglog
-dlog = log --style=/home/carljm/dot/hgext/mercurial-cli-templates/map-cmdline.dlog
+slog = log --style=/home/carljm/dot/hg/map-cmdline.slog
+nlog = log --style=/home/carljm/dot/hg/map-cmdline.nlog
+sglog = glog --style=/home/carljm/dot/hg/map-cmdline.sglog
+dlog = log --style=/home/carljm/dot/hg/map-cmdline.dlog
 nudge = push --rev .
 qstatus = status --rev qparent
 
