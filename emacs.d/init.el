@@ -2,6 +2,8 @@
 
 (require 'init-etags)
 (require 'init-python)
+(require 'init-django)
+
 (require 'column-marker)
 (autoload 'revbufs "revbufs" "Revert all buffers" t)
 
