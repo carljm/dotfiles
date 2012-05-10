@@ -4,7 +4,7 @@ alias rmbak="find . -iname '*~' -delete"
 alias dirsize="/home/carljm/bin/dirsize.sh | sort -n | uniq"
 alias pkgsize='/home/carljm/bin/pkgsize.sh'
 
-alias sshkey="ssh-add /media/keys/romaine_dsa"
+alias sshkey="ssh-add /home/carljm/.ssh/romaine_dsa"
 alias sshtp="ssh tp -t screen -URD"
 alias sshlt="ssh lt -t screen -URD"
 alias sshpuffin="ssh puffin -t screen -URD"
