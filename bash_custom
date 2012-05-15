@@ -21,3 +21,5 @@ source ~/dot/bash_prompt
 export HISTCONTROL=ignoreboth
 export HISTSIZE=100000
 export HISTFILESIZE=100000
+
+export PATH=$HOME/dot/bin:$PATH
