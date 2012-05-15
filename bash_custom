@@ -3,11 +3,17 @@ export EDITOR="/usr/bin/emacs -nw"
 
 export PIP_DOWNLOAD_CACHE=~/.pip/cache
 
-. `which pycompletion`
+PYCOMPLETION=`which pycompletion 2>/dev/null`
+if [ -n "$PYCOMPLETION" ]; then
+  . $PYCOMPLETION
+fi
 
-export WORKON_HOME=$HOME/.venvs
-export PROJECT_HOME=$HOME/projects
-source /usr/local/bin/virtualenvwrapper.sh
+VENVWRAPPER=`which virtualenvwrapper.sh 2>/dev/null`
+if [ -n "$VENVWRAPPER" ]; then
+  export WORKON_HOME=$HOME/.venvs
+  export PROJECT_HOME=$HOME/projects
+  source $VENVWRAPPER
+fi
 
 mktags() {
     PWD=`pwd`
