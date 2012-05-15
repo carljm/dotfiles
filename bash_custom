@@ -17,6 +17,7 @@ mktags() {
 }
 
 source ~/dot/bash_prompt
+source ~/dot/bash_aliases
 
 export HISTCONTROL=ignoreboth
 export HISTSIZE=100000
