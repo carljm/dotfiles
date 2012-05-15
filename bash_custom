@@ -1,6 +1,5 @@
 umask 002
-export EDITOR=/usr/bin/emacsclient
-export PAGER=most
+export EDITOR="/usr/bin/emacs -nw"
 
 export PIP_DOWNLOAD_CACHE=~/.pip/cache
 
