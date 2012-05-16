@@ -30,3 +30,4 @@ alias mk32env="mkvirtualenv -p /opt/Python-3.2.3/bin/python3"
 alias mkvenv=mk27env
 
 alias joe="emacs -nw"
+alias emacs="emacs -nw"
