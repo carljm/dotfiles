@@ -20,7 +20,8 @@
 ; requires pymacs, rope, ropemode, ropemacs
 ;  sudo apt-get install pymacs
 ;  sudo pip install rope ropemode https://bitbucket.org/agr/ropemacs/get/7e2e181c94df.tar.bz2
-(when (require 'pymacs nil 'noerror)
+(defun load-rope ()
+  (require 'pymacs)
   (setq ropemacs-enable-shortcuts nil)
   (setq ropemacs-local-prefix "C-c C-p")
   (pymacs-load "ropemacs" "rope-"))
