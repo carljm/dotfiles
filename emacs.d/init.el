@@ -7,6 +7,11 @@
 (require 'column-marker)
 (autoload 'revbufs "revbufs" "Revert all buffers" t)
 
+(autoload 'markdown-mode "markdown-mode.el"
+   "Major mode for editing Markdown files" t)
+(setq auto-mode-alist
+   (cons '("\\.md" . markdown-mode) auto-mode-alist))
+
 ; from http://www.emacswiki.org/emacs/CopyAndPaste
 (global-set-key "\C-w" 'clipboard-kill-region)
 (global-set-key "\M-w" 'clipboard-kill-ring-save)
