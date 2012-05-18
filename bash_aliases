@@ -30,3 +30,5 @@ alias mkvenv=mk27env
 
 alias joe="emacs -nw"
 alias emacs="emacs -nw"
+
+alias fixssh="source ~/.sshvars"

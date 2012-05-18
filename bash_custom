@@ -31,3 +31,14 @@ export HISTSIZE=100000
 export HISTFILESIZE=100000
 
 export PATH=$HOME/dot/bin:$PATH
+
+# Grab the ssh-agent variables from the current session and write them to
+# ~/.sshvars as a persistent store, for sourcing from within screen/tmux
+SSHVARS="SSH_CLIENT SSH_TTY SSH_AUTH_SOCK SSH_CONNECTION"
+
+for x in ${SSHVARS} ; do
+    (eval echo $x=\$$x) | sed 's/=/="/
+s/$/"/
+s/^/export /'
+done 1>$HOME/.sshvars
+chmod 600 $HOME/.sshvars
