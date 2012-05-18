@@ -24,6 +24,8 @@ mktags() {
 source ~/dot/bash_prompt
 source ~/dot/bash_aliases
 
+eval `dircolors ~/dot/dircolors`
+
 export HISTCONTROL=ignoreboth
 export HISTSIZE=100000
 export HISTFILESIZE=100000

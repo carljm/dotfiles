@@ -26,7 +26,7 @@
   ;; If there is more than one, they won't work right.
  '(browse-url-browser-function (quote browse-url-generic))
  '(browse-url-generic-program "firefox")
- '(default-frame-alist (quote ((menu-bar-lines . 1) (reverse . t) (tool-bar-lines . 0))))
+ '(default-frame-alist (quote ((menu-bar-lines . 1) (tool-bar-lines . 0))))
  '(etags-table-search-up-depth 10)
  '(fill-column 79)
  '(flymake-allowed-file-name-masks (quote (("\\.\\(?:c\\(?:pp\\|xx\\|\\+\\+\\)?\\|CC\\)\\'" flymake-simple-make-init) ("\\.xml\\'" flymake-xml-init) ("\\.cs\\'" flymake-simple-make-init) ("\\.py\\'" flymake-pyflakes-init) ("\\.p[ml]\\'" flymake-perl-init) ("\\.php[345]?\\'" flymake-php-init) ("\\.h\\'" flymake-master-make-header-init flymake-master-cleanup) ("\\.java\\'" flymake-simple-make-java-init flymake-simple-java-cleanup))))
@@ -48,3 +48,7 @@
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
  )
+
+
+(require 'color-theme-solarized)
+(color-theme-solarized-dark)

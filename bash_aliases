@@ -1,4 +1,3 @@
-alias ec="emacsclient -n"
 alias rmpyc="find . -iname '*.pyc' -delete"
 alias rmbak="find . -iname '*~' -delete"
 alias dirsize="/home/carljm/bin/dirsize.sh | sort -n | uniq"
