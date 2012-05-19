@@ -14,7 +14,7 @@ alias sshcp="ssh cp -t screen -URD"
 alias sshql="ssh ql"
 alias sshbruce="ssh bruce"
 alias sshpmc="ssh pmc"
-alias sshdz="ssh dz -A"
+alias sshdz="ssh dz -A -t scr"
 
 alias python2.4=/opt/Python-2.4.6/bin/python
 alias python2.5=/opt/Python-2.5.6/bin/python
