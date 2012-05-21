@@ -21,6 +21,7 @@ Install with OS package manager:
     - built in to Emacs 24
     - emacs-goodies-el via apt, emacs-color-theme-el via yum
   - pymacs
+  - irssi
 
 Install with pip:
   - pycompletion

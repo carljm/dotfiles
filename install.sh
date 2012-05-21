@@ -16,6 +16,24 @@ for fn in gitconfig screenrc emacs.d hgrc; do
   fi
 done
 
+src="$HOME/dot/irssi"
+dest="$HOME/.irssi"
+if [ -e $dest ]; then
+  echo "skipping irssi; already exists in homedir"
+else
+  echo "creating ~/.irssi"
+  mkdir -p $dest
+  echo "  copying irssi/config and substituting passwords"
+  read -p "FreeNode IRC password? " freenode_irc_pw
+  read -p "Mozilla IRC password? " mozilla_irc_pw
+  cp $src/config $dest
+  perl -pi -e "s/<FREENODE_PW>/$freenode_irc_pw/;" $dest/config
+  perl -pi -e "s/<MOZILLA_PW>/$mozilla_irc_pw/;" $dest/config
+  echo "  linking theme and scripts"
+  ln -s $src/solarized-universal.theme $dest/solarized-universal.theme
+  ln -s $src/scripts $dest/scripts
+fi
+
 if grep -q ". ~/dot/bash_custom" "$HOME/.bashrc"; then
   echo "skipping source of bash_custom; already in ~/.bashrc"
 else
