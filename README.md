@@ -17,6 +17,9 @@ dependencies, but make use of them if they are present.
 
 Install with OS package manager:
   - emacs
+  - emacs color-theme
+    - built in to Emacs 24
+    - emacs-goodies-el via apt, emacs-color-theme-el via yum
   - pymacs
 
 Install with pip:

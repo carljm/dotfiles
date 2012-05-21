@@ -50,5 +50,6 @@
  )
 
 
-(require 'color-theme-solarized)
-(color-theme-solarized-dark)
+(when (require 'color-theme nil 'noerror)
+  (when (require 'color-theme-solarized nil 'noerror)
+    (color-theme-solarized-dark)))
