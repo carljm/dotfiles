@@ -1,7 +1,7 @@
 alias rmpyc="find . -iname '*.pyc' -delete"
 alias rmbak="find . -iname '*~' -delete"
-alias dirsize="/home/carljm/bin/dirsize.sh | sort -n | uniq"
-alias pkgsize='/home/carljm/bin/pkgsize.sh'
+alias dirsize="/home/carljm/dot/bin/dirsize.sh | sort -n | uniq"
+alias pkgsize='/home/carljm/dot/bin/pkgsize.sh'
 
 alias sshkey="ssh-add /home/carljm/.ssh/romaine_dsa"
 alias sshtp="ssh tp -t screen -URD"
