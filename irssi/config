@@ -76,11 +76,14 @@ chatnets = {
 
 channels = (
   { name = "#ateam"; chatnet = "Mozilla"; autojoin = "yes"; },
-  { name = "#qa"; chatnet = "Mozilla"; autojoin = "yes"; },
+  { name = "#datazilla"; chatnet = "Mozilla"; autojoin = "yes"; },
   { name = "#moztrap"; chatnet = "Mozilla"; autojoin = "yes"; },
+  { name = "#qa"; chatnet = "Mozilla"; autojoin = "yes"; },
   { name = "#webdev"; chatnet = "Mozilla"; autojoin = "yes"; }
   { name = "#identity"; chatnet = "Mozilla"; autojoin = "yes"; }
   { name = "#petri"; chatnet = "Mozilla"; autojoin = "yes"; }
+  { name = "#moco"; chatnet = "Mozilla"; autojoin = "yes"; password = "<MOCO_PW>"; }
+  { name = "#airmozilla"; chatnet = "Mozilla"; autojoin = "yes"; }
   { name = "#django"; chatnet = "FreeNode"; autojoin = "yes"; },
   { name = "#django-dev"; chatnet = "FreeNode"; autojoin = "yes"; },
   { name = "#django-sprint"; chatnet = "FreeNode"; autojoin = "yes"; },
@@ -93,6 +96,7 @@ channels = (
   { name = "#python-dev"; chatnet = "FreeNode"; autojoin = "yes"; },
   { name = "#cores"; chatnet = "FreeNode"; autojoin = "yes"; },
   { name = "#python"; chatnet = "FreeNode"; autojoin = "yes"; },
+  { name = "#pylib"; chatnet = "FreeNode"; autojoin = "yes"; },
 );
 
 aliases = {
