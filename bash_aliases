@@ -20,15 +20,19 @@ alias python2.4=/opt/Python-2.4.6/bin/python
 alias python2.5=/opt/Python-2.5.6/bin/python
 alias python2.6=/opt/Python-2.6.8/bin/python
 alias python3.2=/opt/Python-3.2.3/bin/python3
+alias python3.3=/opt/Python-3.3.0a4/bin/python3
 
 alias mk24env="mkvirtualenv -p /opt/Python-2.4.6/bin/python"
 alias mk25env="mkvirtualenv -p /opt/Python-2.5.6/bin/python"
 alias mk26env="mkvirtualenv -p /opt/Python-2.6.8/bin/python"
 alias mk27env="mkvirtualenv -p /opt/Python-2.7.3/bin/python"
 alias mk32env="mkvirtualenv -p /opt/Python-3.2.3/bin/python3"
+alias mk33env="mkvirtualenv -p /opt/Python-3.3.0a4/bin/python3"
 alias mkvenv=mk27env
 
 alias joe="emacs -nw"
 alias emacs="emacs -nw"
 
 alias fixssh="source ~/.sshvars"
+
+alias rs="redshift -l 44.08:-103.25"
