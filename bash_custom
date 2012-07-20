@@ -32,3 +32,4 @@ export HISTFILESIZE=100000
 
 export PATH=$HOME/dot/bin:$PATH
 
+eval "$(hub alias -s)"
