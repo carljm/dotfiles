@@ -77,6 +77,7 @@ chatnets = {
 channels = (
   { name = "#ateam"; chatnet = "Mozilla"; autojoin = "yes"; },
   { name = "#datazilla"; chatnet = "Mozilla"; autojoin = "yes"; },
+  { name = "#spade"; chatnet = "Mozilla"; autojoin = "yes"; },
   { name = "#moztrap"; chatnet = "Mozilla"; autojoin = "yes"; },
   { name = "#qa"; chatnet = "Mozilla"; autojoin = "yes"; },
   { name = "#webdev"; chatnet = "Mozilla"; autojoin = "yes"; }
@@ -84,6 +85,7 @@ channels = (
   { name = "#petri"; chatnet = "Mozilla"; autojoin = "yes"; }
   { name = "#moco"; chatnet = "Mozilla"; autojoin = "yes"; password = "<MOCO_PW>"; }
   { name = "#airmozilla"; chatnet = "Mozilla"; autojoin = "yes"; }
+  { name = "#planning"; chatnet = "Mozilla"; autojoin = "yes"; }
   { name = "#django"; chatnet = "FreeNode"; autojoin = "yes"; },
   { name = "#django-dev"; chatnet = "FreeNode"; autojoin = "yes"; },
   { name = "#django-sprint"; chatnet = "FreeNode"; autojoin = "yes"; },
