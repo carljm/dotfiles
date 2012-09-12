@@ -4,6 +4,10 @@
 (require 'init-python)
 (require 'init-django)
 
+(require 'multi-term)
+(setq multi-term-program "/bin/bash")
+(global-set-key [f9] 'multi-term)
+
 (require 'column-marker)
 (autoload 'revbufs "revbufs" "Revert all buffers" t)
 
