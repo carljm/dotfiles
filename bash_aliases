@@ -30,3 +30,5 @@ alias emacs="emacs -nw"
 alias fixssh="source ~/.sshvars"
 
 alias rs="redshift -l 44.08:-103.25"
+
+alias g=git
