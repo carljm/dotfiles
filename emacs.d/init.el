@@ -3,6 +3,7 @@
 (require 'init-etags)
 (require 'init-python)
 (require 'init-django)
+(require 'init-git)
 
 (require 'multi-term)
 (setq multi-term-program "/bin/bash")
