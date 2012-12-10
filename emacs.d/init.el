@@ -4,6 +4,7 @@
 (require 'init-python)
 (require 'init-django)
 (require 'init-git)
+(require 'init-js)
 
 (require 'multi-term)
 (setq multi-term-program "/bin/bash")
@@ -38,7 +39,7 @@
  '(default-frame-alist (quote ((menu-bar-lines . 1))))
  '(etags-table-search-up-depth 10)
  '(fill-column 79)
- '(flymake-allowed-file-name-masks (quote (("\\.\\(?:c\\(?:pp\\|xx\\|\\+\\+\\)?\\|CC\\)\\'" flymake-simple-make-init) ("\\.xml\\'" flymake-xml-init) ("\\.cs\\'" flymake-simple-make-init) ("\\.py\\'" flymake-pyflakes-init) ("\\.p[ml]\\'" flymake-perl-init) ("\\.php[345]?\\'" flymake-php-init) ("\\.h\\'" flymake-master-make-header-init flymake-master-cleanup) ("\\.java\\'" flymake-simple-make-java-init flymake-simple-java-cleanup))))
+ '(flymake-allowed-file-name-masks (quote (("\\.\\(?:c\\(?:pp\\|xx\\|\\+\\+\\)?\\|CC\\)\\'" flymake-simple-make-init) ("\\.xml\\'" flymake-xml-init) ("\\.cs\\'" flymake-simple-make-init) ("\\.py\\'" flymake-pyflakes-init) ("\\.p[ml]\\'" flymake-perl-init) ("\\.php[345]?\\'" flymake-php-init) ("\\.h\\'" flymake-master-make-header-init flymake-master-cleanup) ("\\.java\\'" flymake-simple-make-java-init flymake-simple-java-cleanup) ("\\.js\\'" flymake-jshint-init flymake-simple-cleanup flymake-get-real-file-name))))
  '(ido-enable-flex-matching t)
  '(indent-tabs-mode nil)
  '(python-mode-hook (quote (imenu-add-menubar-index cjm-python-mode-hook)) t)
