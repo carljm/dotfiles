@@ -41,5 +41,6 @@
                    default-directory
                  (read-directory-name (format "Search for %s in: " string)))))
      (list string dir)))
-  (git-tools-at-branch-root dirname
-   (grep (format git-tools-grep-command (shell-quote-argument expression)))))
+  (let ((grep-use-null-device nil))
+    (git-tools-at-branch-root dirname
+      (grep (format git-tools-grep-command (shell-quote-argument expression))))))
