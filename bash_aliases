@@ -32,3 +32,23 @@ alias fixssh="source ~/.sshvars"
 alias rs="redshift -l 44.08:-103.25"
 
 alias g=git
+
+mktags() {
+    PWD=`pwd`
+    SP=`virtualenvwrapper_get_site_packages_dir`
+    find $PWD $SP -name '*.py' | etags -
+}
+
+djtests() {
+    if [[ "$1" =~ ^db=.* ]]; then
+        DB=${1#db=}
+        shift
+    else
+        DB="sqlite"
+    fi
+
+    pushd /home/carljm/projects/django/django/django/tests/
+    PYTHONHASHSEED="random" DJANGO_SETTINGS_MODULE=testconf.${DB} coverage run runtests.py $@
+    coverage html
+    popd
+}
