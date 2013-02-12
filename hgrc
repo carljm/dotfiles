@@ -24,12 +24,13 @@ record =
 mq =
 fetch =
 gpg =
-rebase = 
+rebase =
 color =
 transplant =
 hgk =
 pager =
-progress = 
+progress =
+git =
 
 [diff]
 git = True

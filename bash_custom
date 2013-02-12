@@ -15,12 +15,6 @@ if [ -n "$VENVWRAPPER" ]; then
   source $VENVWRAPPER
 fi
 
-mktags() {
-    PWD=`pwd`
-    SP=`virtualenvwrapper_get_site_packages_dir`
-    find $PWD $SP -name '*.py' | etags -
-}
-
 source ~/dot/bash_prompt
 source ~/dot/bash_aliases
 
@@ -32,3 +26,4 @@ export HISTFILESIZE=100000
 
 export PATH=$HOME/dot/bin:$PATH
 
+eval "$(hub alias -s)"

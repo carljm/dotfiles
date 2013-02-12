@@ -7,13 +7,22 @@
 	co = checkout
 	br = branch
 	ci = commit
-	st = status
+	st = status -s
 	di = diff
 	dc = diff --cached
+	l = log --pretty --graph
+	tags = tag -l
+	branches = branch -a
+	remotes = remote -v
 
 [core]
 	excludesfile = ~/dot/gitignore
+
 [color]
-	ui = true
+	ui = auto
+
 [push]
 	default = tracking
+
+[merge]
+	log = true
