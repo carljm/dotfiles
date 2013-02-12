@@ -38,9 +38,9 @@ snr() {
     }
 
 mktags() {
-    PWD=`pwd`
+    CWD=`pwd`
     SP=`virtualenvwrapper_get_site_packages_dir`
-    find $PWD $SP -name '*.py' | etags -
+    find $CWD $SP -name '*.py' | etags -
 }
 
 djtests() {
