@@ -33,6 +33,10 @@ alias rs="redshift -l 44.08:-103.25"
 
 alias g=git
 
+snr() {
+    find . -type f -print0 | xargs -0 -p -i -e ${1}
+    }
+
 mktags() {
     PWD=`pwd`
     SP=`virtualenvwrapper_get_site_packages_dir`
