@@ -53,6 +53,5 @@ djtests() {
 
     pushd /home/carljm/projects/django/django/django/tests/
     PYTHONHASHSEED="random" DJANGO_SETTINGS_MODULE=testconf.${DB} coverage run runtests.py $@
-    coverage html
     popd
 }
