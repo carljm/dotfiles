@@ -1,0 +1,14 @@
+export PATH=$PATH:/usr/local/share/python
+
+VENVWRAPPER=/usr/local/share/python/virtualenvwrapper.sh
+if [ -n "$VENVWRAPPER" ]; then
+  export WORKON_HOME=$HOME/.venvs
+  export PROJECT_HOME=$HOME/workspace
+  source $VENVWRAPPER
+
+  alias mk26env="mkvirtualenv -p /usr/local/bin/python2.6"
+  alias mk27env="mkvirtualenv -p /usr/local/bin/python2.7"
+  alias mk32env="mkvirtualenv -p /usr/local/bin/python3.2"
+  alias mk33env="mkvirtualenv -p /usr/local/bin/python3.3"
+
+fi
