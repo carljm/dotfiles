@@ -19,9 +19,9 @@ alias sshdz="ssh dz -A -t scr"
 alias mk24env="mkvirtualenv -p /opt/Python-2.4.6/bin/python"
 alias mk25env="mkvirtualenv -p /opt/Python-2.5.6/bin/python"
 alias mk26env="mkvirtualenv -p /opt/Python-2.6.8/bin/python"
-alias mk27env="mkvirtualenv -p /opt/Python-2.7.3/bin/python"
-alias mk32env="mkvirtualenv -p /opt/Python-3.2.3/bin/python3"
-alias mk33env="mkvirtualenv -p /opt/Python-3.3.0/bin/python3"
+alias mk27env="mkvirtualenv -p /opt/Python-2.7.4/bin/python"
+alias mk32env="mkvirtualenv -p /opt/Python-3.2.4/bin/python3"
+alias mk33env="mkvirtualenv -p /opt/Python-3.3.1/bin/python3"
 alias mkvenv=mk27env
 
 alias joe="emacs -nw"
@@ -34,7 +34,7 @@ alias rs="redshift -l 44.08:-103.25"
 alias g=git
 
 snr() {
-    find . -type f -print0 | xargs -0 -p -i -e ${1}
+    find . -type f -print0 | xargs -0 perl -pi -e "${1}"
     }
 
 mktags() {
