@@ -1,4 +1,8 @@
-export PATH=$PATH:/usr/local/share/python
+export CLICOLOR=1
+
+export PATH=$HOME/dot/bin:$PATH:/usr/local/share/python
+
+eval "$(hub alias -s)"
 
 VENVWRAPPER=/usr/local/share/python/virtualenvwrapper.sh
 if [ -n "$VENVWRAPPER" ]; then
@@ -11,4 +15,8 @@ if [ -n "$VENVWRAPPER" ]; then
   alias mk32env="mkvirtualenv -p /usr/local/bin/python3.2"
   alias mk33env="mkvirtualenv -p /usr/local/bin/python3.3"
 
+fi
+
+if [ -f ~/dot/osx/git-completion.bash ]; then
+  . ~/dot/osx/git-completion.bash
 fi
