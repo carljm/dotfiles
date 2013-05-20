@@ -51,7 +51,7 @@ djtests() {
         DB="sqlite"
     fi
 
-    pushd /home/carljm/projects/django/django/django/tests/
+    pushd tests/
     PYTHONHASHSEED="random" DJANGO_SETTINGS_MODULE=testconf.${DB} coverage run runtests.py $@
     popd
 }
