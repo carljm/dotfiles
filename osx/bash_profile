@@ -4,6 +4,8 @@ export PATH=$HOME/dot/bin:$PATH:/usr/local/share/python
 
 eval "$(hub alias -s)"
 
+. ~/dot/bash_aliases
+
 VENVWRAPPER=/usr/local/share/python/virtualenvwrapper.sh
 if [ -n "$VENVWRAPPER" ]; then
   export WORKON_HOME=$HOME/.venvs
@@ -19,3 +21,4 @@ fi
 
 . ~/dot/osx/git-completion.bash
 . ~/dot/bash_prompt
+
