@@ -17,6 +17,5 @@ if [ -n "$VENVWRAPPER" ]; then
 
 fi
 
-if [ -f ~/dot/osx/git-completion.bash ]; then
-  . ~/dot/osx/git-completion.bash
-fi
+. ~/dot/osx/git-completion.bash
+. ~/dot/bash_prompt
