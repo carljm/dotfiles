@@ -21,7 +21,7 @@ alias mk25env="mkvirtualenv -p /opt/Python-2.5.6/bin/python"
 alias mk26env="mkvirtualenv -p /opt/Python-2.6.8/bin/python"
 alias mk27env="mkvirtualenv -p /opt/Python-2.7.4/bin/python"
 alias mk32env="mkvirtualenv -p /opt/Python-3.2.4/bin/python3"
-alias mk33env="mkvirtualenv -p /opt/Python-3.3.1/bin/python3"
+alias mk33env="mkvirtualenv -p /opt/Python-3.3.2/bin/python3"
 alias mkvenv=mk27env
 
 alias joe="emacs -nw"
