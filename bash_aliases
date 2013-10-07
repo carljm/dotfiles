@@ -1,4 +1,4 @@
-alias rmpyc="find . -iname '*.pyc' -delete"
+alias rmpyc="find . \( -name '*.pyc' -o -name '__pycache__' \) -print0 | xargs -0 rm -rf"
 alias rmbak="find . -iname '*~' -delete"
 alias dirsize="/home/carljm/dot/bin/dirsize.sh | sort -n | uniq"
 alias pkgsize='/home/carljm/dot/bin/pkgsize.sh'
@@ -40,7 +40,7 @@ snr() {
 mktags() {
     CWD=`pwd`
     SP=`virtualenvwrapper_get_site_packages_dir`
-    find $CWD $SP -name '*.py' | etags -
+    find $CWD $SP -path $CWD/.tox -prune -o -name '*.py' -print | etags -
 }
 
 djtests() {
