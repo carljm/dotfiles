@@ -22,3 +22,6 @@ fi
 . ~/dot/osx/git-completion.bash
 . ~/dot/bash_prompt
 
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
