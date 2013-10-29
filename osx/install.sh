@@ -5,7 +5,7 @@ if [ ! -f "$HOME/dot/osx/install.sh" ]; then
   exit 1
 fi
 
-for fn in gitconfig; do
+for fn in gitconfig .emacs.d; do
   src="$HOME/dot/${fn}"
   dest="$HOME/.${fn}"
   if [ -e $dest ]; then
