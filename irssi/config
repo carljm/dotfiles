@@ -89,6 +89,7 @@ channels = (
   { name = "#distutils"; chatnet = "FreeNode"; autojoin = "yes"; },
   { name = "#pip"; chatnet = "FreeNode"; autojoin = "yes"; },
   { name = "#pypa"; chatnet = "FreeNode"; autojoin = "yes"; },
+  { name = "#warehouse"; chatnet = "FreeNode"; autojoin = "yes"; },
   { name = "#python-testing"; chatnet = "FreeNode"; autojoin = "yes"; },
   { name = "#pypy"; chatnet = "FreeNode"; autojoin = "yes"; },
   { name = "#python-dev"; chatnet = "FreeNode"; autojoin = "yes"; },

@@ -6,6 +6,9 @@
 (require 'init-git)
 (require 'init-js)
 
+(require 'yaml-mode)
+(add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
+
 (require 'multi-term)
 (setq multi-term-program "/bin/bash")
 (global-set-key [f9] 'multi-term)
@@ -15,8 +18,7 @@
 
 (autoload 'markdown-mode "markdown-mode.el"
    "Major mode for editing Markdown files" t)
-(setq auto-mode-alist
-   (cons '("\\.md" . markdown-mode) auto-mode-alist))
+(add-to-list 'auto-mode-alist '("\\.md" . markdown-mode))
 
 ; from http://www.emacswiki.org/emacs/CopyAndPaste
 (global-set-key "\C-x\C-k" 'clipboard-kill-region)
