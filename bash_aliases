@@ -5,7 +5,7 @@ alias pkgsize='/home/carljm/dot/bin/pkgsize.sh'
 
 alias sshkey="ssh-add /home/carljm/.ssh/romaine_dsa"
 alias sshtp="ssh tp -t screen -URD"
-alias sshlt="ssh lt -A -t ~/dot/bin/scr"
+alias sshlt="ssh lt -A -t /home/carljm/dot/bin/scr"
 alias sshpuffin="ssh puffin -t screen -URD"
 alias sshsw="ssh sw"
 alias sshmwr="ssh mwr"
@@ -37,10 +37,16 @@ snr() {
     find . -type f -print0 | xargs -0 perl -pi -e "${1}"
     }
 
-mktags() {
+mketags() {
     CWD=`pwd`
     SP=`virtualenvwrapper_get_site_packages_dir`
     find $CWD $SP -name '*.py' | etags -
+}
+
+mkctags() {
+    CWD=`pwd`
+    SP=`virtualenvwrapper_get_site_packages_dir`
+    find $CWD $SP -name '*.py' -print0 | xargs -0 ctags -o .tags
 }
 
 djtests() {
