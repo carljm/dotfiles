@@ -3,6 +3,7 @@
 (require 'init-etags)
 (require 'init-python)
 (require 'init-django)
+(require 'init-jinja)
 (require 'init-git)
 (require 'init-js)
 
