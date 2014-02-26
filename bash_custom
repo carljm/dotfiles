@@ -1,8 +1,6 @@
 umask 002
 export EDITOR="/usr/bin/emacs -nw"
 
-export PIP_DOWNLOAD_CACHE=~/.pip/cache
-
 PYCOMPLETION=`which pycompletion 2>/dev/null`
 if [ -n "$PYCOMPLETION" ]; then
   . $PYCOMPLETION
