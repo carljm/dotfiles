@@ -1,5 +1,7 @@
 (add-to-list 'load-path "~/.emacs.d" load-path)
 
+(setq create-lockfiles nil)
+
 (require 'init-etags)
 (require 'init-python)
 (require 'init-django)
