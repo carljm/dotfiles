@@ -1,5 +1,5 @@
 (defun cjm-python-mode-hook ()
-  (column-marker-1 80)
+  (column-marker-1 79)
   (define-key python-mode-map "" (quote newline-and-indent)))
 
 ; requires pyflakes
