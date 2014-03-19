@@ -17,19 +17,16 @@ dependencies, but make use of them if they are present.
 
 Install with OS package manager:
   - emacs
-  - emacs color-theme
-    - built in to Emacs 24
-    - emacs-goodies-el via apt, emacs-color-theme-el via yum
-  - pymacs
   - irssi
 
 Install with pip:
   - pycompletion
   - virtualenv
   - virtualenvwrapper
-  - rope
-  - ropemode
-  - ropemacs
+  - flake8
+
+Install with npm:
+  - jshint
 
 Compile:
   - recent versions of Python in /opt, to match aliases in bash_aliases

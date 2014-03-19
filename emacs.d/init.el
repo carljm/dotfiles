@@ -7,6 +7,17 @@
 
 (setq create-lockfiles nil)
 
+(when (not package-archive-contents)
+  (package-refresh-contents))
+
+(defvar required-packages
+  '(flycheck solarized-theme)
+  "Packages which should be installed upon launch")
+
+(dolist (p required-packages)
+  (when (not (package-installed-p p))
+    (package-install p)))
+
 (load-theme 'solarized-dark t)
 
 (require 'init-etags)
