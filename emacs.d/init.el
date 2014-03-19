@@ -8,11 +8,9 @@
 (setq create-lockfiles nil)
 
 (require 'init-etags)
-(require 'init-python)
 (require 'init-django)
 (require 'init-jinja)
 (require 'init-git)
-(require 'init-js)
 
 (require 'yaml-mode)
 (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
