@@ -69,8 +69,3 @@
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
  )
-
-
-(when (require 'color-theme nil 'noerror)
-  (when (require 'color-theme-solarized nil 'noerror)
-    (color-theme-solarized-dark)))
