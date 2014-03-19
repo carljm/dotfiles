@@ -32,7 +32,6 @@
 (setq multi-term-program "/bin/bash")
 (global-set-key [f9] 'multi-term)
 
-(require 'column-marker)
 (autoload 'revbufs "revbufs" "Revert all buffers" t)
 
 (add-to-list 'auto-mode-alist '("\\.md" . markdown-mode))
