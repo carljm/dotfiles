@@ -1,5 +1,10 @@
 (add-to-list 'load-path "~/.emacs.d" load-path)
 
+(require 'package)
+(add-to-list 'package-archives
+             '("melpa" . "http://melpa.milkbox.net/packages/") t)
+(package-initialize)
+
 (setq create-lockfiles nil)
 
 (require 'init-etags)
@@ -47,7 +52,8 @@
  '(ido-enable-flex-matching t)
  '(indent-tabs-mode nil)
  '(js-indent-level 2)
- '(python-mode-hook (quote (imenu-add-menubar-index cjm-python-mode-hook)) t)
+ '(python-mode-hook (quote (imenu-add-menubar-index flycheck-mode)) t)
+ '(js-mode-hook (quote (flycheck-mode)) t)
  '(require-final-newline (quote visit-save))
  '(same-window-buffer-names (quote ("*shell*" "*mail*" "*inferior-lisp*" "*ielm*" "*scheme*" "*Org Agenda*" "*Agenda Commands*")))
  '(sgml-basic-offset 2)
