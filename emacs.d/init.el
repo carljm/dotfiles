@@ -11,7 +11,7 @@
   (package-refresh-contents))
 
 (defvar required-packages
-  '(flycheck solarized-theme jinja2-mode markdown-mode etags-table)
+  '(flycheck solarized-theme jinja2-mode markdown-mode etags-table multi-term)
   "Packages which should be installed upon launch")
 
 (dolist (p required-packages)
