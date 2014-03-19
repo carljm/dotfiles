@@ -1,3 +1,0 @@
-[submodule "emacs.d/jinja2-mode"]
-	path = emacs.d/jinja2-mode
-	url = git://github.com/paradoxxxzero/jinja2-mode.git

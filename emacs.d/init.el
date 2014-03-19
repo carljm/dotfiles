@@ -11,7 +11,7 @@
   (package-refresh-contents))
 
 (defvar required-packages
-  '(flycheck solarized-theme)
+  '(flycheck solarized-theme jinja2-mode markdown-mode)
   "Packages which should be installed upon launch")
 
 (dolist (p required-packages)
@@ -35,8 +35,6 @@
 (require 'column-marker)
 (autoload 'revbufs "revbufs" "Revert all buffers" t)
 
-(autoload 'markdown-mode "markdown-mode.el"
-   "Major mode for editing Markdown files" t)
 (add-to-list 'auto-mode-alist '("\\.md" . markdown-mode))
 
 ; from http://www.emacswiki.org/emacs/CopyAndPaste
