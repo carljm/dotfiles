@@ -1,6 +1,3 @@
-[submodule "emacs.d/jshint-mode"]
-	path = emacs.d/jshint-mode
-	url = git://github.com/daleharvey/jshint-mode.git
 [submodule "emacs.d/jinja2-mode"]
 	path = emacs.d/jinja2-mode
 	url = git://github.com/paradoxxxzero/jinja2-mode.git
