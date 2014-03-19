@@ -7,6 +7,8 @@
 
 (setq create-lockfiles nil)
 
+(load-theme 'solarized-dark t)
+
 (require 'init-etags)
 (require 'init-django)
 (require 'init-jinja)
@@ -38,20 +40,21 @@
 (ido-mode)
 
 (custom-set-variables
-  ;; custom-set-variables was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  '(browse-url-browser-function (quote browse-url-generic))
  '(browse-url-generic-program "firefox")
+ '(custom-safe-themes (quote ("8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" default)))
  '(default-frame-alist (quote ((menu-bar-lines . 1))))
  '(etags-table-search-up-depth 10)
  '(fill-column 79)
  '(ido-enable-flex-matching t)
  '(indent-tabs-mode nil)
  '(js-indent-level 2)
- '(python-mode-hook (quote (imenu-add-menubar-index flycheck-mode)) t)
  '(js-mode-hook (quote (flycheck-mode)) t)
+ '(python-mode-hook (quote (imenu-add-menubar-index flycheck-mode)) t)
  '(require-final-newline (quote visit-save))
  '(same-window-buffer-names (quote ("*shell*" "*mail*" "*inferior-lisp*" "*ielm*" "*scheme*" "*Org Agenda*" "*Agenda Commands*")))
  '(sgml-basic-offset 2)
@@ -64,8 +67,8 @@
  '(transient-mark-mode t)
  '(uniquify-buffer-name-style (quote post-forward-angle-brackets) nil (uniquify)))
 (custom-set-faces
-  ;; custom-set-faces was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  )
