@@ -1,7 +1,5 @@
 (require 'etags)
 
-; cjm 2009.04.21 etags-table and etags-select
-; http://www.emacswiki.org/emacs/etags-table.el
 ; http://www.emacswiki.org/emacs/etags-select.el
 (require 'etags-table)
 (require 'etags-select)
