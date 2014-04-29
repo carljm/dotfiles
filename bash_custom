@@ -22,6 +22,8 @@ export HISTCONTROL=ignoreboth
 export HISTSIZE=100000
 export HISTFILESIZE=100000
 
-export PATH=$HOME/dot/bin:$HOME/.local/bin:$PATH
+export PATH=$HOME/dot/bin:$HOME/.local/bin:/usr/local/go/bin:$HOME/go/bin:$PATH
+
+export GOPATH=$HOME/go
 
 eval "$(hub alias -s)"
