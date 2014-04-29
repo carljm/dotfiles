@@ -65,6 +65,7 @@
  '(python-mode-hook (quote (imenu-add-menubar-index flycheck-mode)) t)
  '(require-final-newline (quote visit-save))
  '(same-window-buffer-names (quote ("*shell*" "*mail*" "*inferior-lisp*" "*ielm*" "*scheme*" "*Org Agenda*" "*Agenda Commands*")))
+ '(scss-compile-at-save nil)
  '(sgml-basic-offset 2)
  '(show-paren-mode t)
  '(show-trailing-whitespace t)
