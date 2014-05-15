@@ -5,8 +5,6 @@
              '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (package-initialize)
 
-(setq create-lockfiles nil)
-
 (when (not package-archive-contents)
   (package-refresh-contents))
 
