@@ -94,6 +94,7 @@ channels = (
   { name = "#pypy"; chatnet = "FreeNode"; autojoin = "yes"; },
   { name = "#python-dev"; chatnet = "FreeNode"; autojoin = "yes"; },
   { name = "#python"; chatnet = "FreeNode"; autojoin = "yes"; },
+  { name = "#positivepython"; chatnet = "FreeNode"; autojoin = "yes"; },
   { name = "#pylib"; chatnet = "FreeNode"; autojoin = "yes"; },
   { name = "#openhatch"; chatnet = "FreeNode"; autojoin = "yes"; },
   { name = "#pykids"; chatnet = "FreeNode"; autojoin = "yes"; },

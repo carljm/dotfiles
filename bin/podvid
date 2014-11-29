@@ -1,5 +1,0 @@
-#!/bin/bash
-
-# based on https://help.ubuntu.com/community/AndroidVideoEncoding
-
-ffmpeg -i $1 -s 480x320 -vcodec mpeg4 -acodec libfaac -ac 2 -ar 44100 -r 13 -ab 64000 -aspect 3:2 ${1%%.avi}.mp4
