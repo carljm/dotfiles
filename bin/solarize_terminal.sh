@@ -2,14 +2,16 @@
 #
 # from https://gist.github.com/1397104
 #
-# Shell script that configures gnome-terminal to use solarized theme
-# colors. Written for Ubuntu 11.10, untested on anything else.
+# Shell script that configures gnome-terminal and guake to use solarized theme
+# colors. Works on Ubuntu 11.10, 12.04, 14.04, at least.
 #
 # Solarized theme: http://ethanschoonover.com/solarized
 #
 # Adapted from these sources:
 # https://gist.github.com/1280177
 # http://xorcode.com/guides/solarized-vim-eclipse-ubuntu/
+# https://github.com/coolwanglu/guake-colors-solarized
+# https://github.com/Anthony25/gnome-terminal-colors-solarized
 
 case "$1" in
   "dark")
@@ -33,3 +35,6 @@ gconftool-2 --set "/apps/gnome-terminal/profiles/Default/use_theme_colors" --typ
 gconftool-2 --set "/apps/gnome-terminal/profiles/Default/palette" --type string "$PALETTE"
 gconftool-2 --set "/apps/gnome-terminal/profiles/Default/background_color" --type string "$BG_COLOR"
 gconftool-2 --set "/apps/gnome-terminal/profiles/Default/foreground_color" --type string "$FG_COLOR"
+gconftool-2 --set "/apps/guake/style/background/color" --type string "$BG_COLOR"
+gconftool-2 --set "/apps/guake/style/font/color" --type string "$FG_COLOR"
+gconftool-2 --set "/apps/guake/style/font/palette" --type string "$PALETTE"
