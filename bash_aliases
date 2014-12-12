@@ -16,18 +16,15 @@ alias sshbruce="ssh bruce"
 alias sshpmc="ssh pmc"
 alias sshdz="ssh dz -A -t scr"
 
-alias mk24env="mkvirtualenv -p /opt/Python-2.4.6/bin/python"
-alias mk25env="mkvirtualenv -p /opt/Python-2.5.6/bin/python"
-alias mk26env="mkvirtualenv -p /opt/Python-2.6.8/bin/python"
-alias mk27env="mkvirtualenv -p /opt/Python-2.7.5/bin/python"
-alias mk32env="mkvirtualenv -p /opt/Python-3.2.4/bin/python3"
+alias mk26env="mkvirtualenv -p /opt/Python-2.6.9/bin/python"
+alias mk27env="mkvirtualenv -p /opt/Python-2.7.9/bin/python"
+alias mk32env="mkvirtualenv -p /opt/Python-3.2.6/bin/python3"
 alias mk33env="mkvirtualenv -p /opt/Python-3.3.6/bin/python3"
 alias mk34env="mkvirtualenv -p /opt/Python-3.4.1/bin/python3"
-alias mkpypyenv="mkvirtualenv -p /opt/pypy-2.3.1-linux64/bin/pypy"
-alias mkpypy3env="mkvirtualenv -p /opt/pypy3-2.3.1-linux64/bin/pypy"
+alias mkpypyenv="mkvirtualenv -p /opt/pypy-2.4.0-linux64/bin/pypy"
+alias mkpypy3env="mkvirtualenv -p /opt/pypy3-2.4.0-linux64/bin/pypy"
 alias mkvenv=mk27env
 
-alias joe="emacs -nw"
 alias emacs="emacs -nw"
 
 alias fixssh="source ~/.sshvars"
