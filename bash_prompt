@@ -81,7 +81,7 @@ function set_prompt() {
     # If this is an xterm set the title to user@host:dir
     case "$TERM" in
     xterm*|rxvt*)
-        title="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]"
+        title="\[\e]0;${USER}@${HOST}:${_dirname}\a\]"
         ;;
     *)
 	title=""
