@@ -78,26 +78,17 @@ function set_prompt() {
     # user
     user="${CYAN}${USER}${NIL}"
 
-    # shortened version of user@host for terminal title
+    # include host in terminal title only if not local host
     if [[ -n $SSH_CLIENT ]]; then
-        shorthost="${HOST}"
+        shorthost="${HOST}:"
     else
         shorthost=""
     fi
-    if [[ $USER == "carljm" ]]; then
-        shortuser=""
-    else
-        shortuser="${USER}"
-    fi
-    shortuserhost="${shortuser}@${shorthost}:"
-    if [[ $shortuserhost == "@:" ]]; then
-        shortuserhost=""
-    fi
 
-    # If this is an xterm set the title to user@host:dir
+    # If this is an xterm set the title to host:dir
     case "$TERM" in
     xterm*|rxvt*)
-        title="\[\e]0;${shortuserhost}${_dirname}\a\]"
+        title="\[\e]0;${shorthost}${_dirname}\a\]"
         ;;
     *)
 	title=""
