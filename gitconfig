@@ -26,3 +26,6 @@
 
 [merge]
 	log = true
+
+[grep]
+        patternType = extended
