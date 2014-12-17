@@ -5,7 +5,7 @@ alias pkgsize='/home/carljm/dot/bin/pkgsize.sh'
 
 alias sshkey="ssh-add /home/carljm/.ssh/romaine_dsa"
 alias sshtp="ssh tp -t screen -URD"
-alias sshlt="ssh lt -A -t /home/carljm/dot/bin/scr"
+alias sshlt="echo -ne '\033]0;screen[lettuce]\007' && ssh lt -A -t /home/carljm/dot/bin/scr"
 alias sshpuffin="ssh puffin -t screen -URD"
 alias sshsw="ssh sw"
 alias sshmwr="ssh mwr"
