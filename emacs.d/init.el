@@ -9,7 +9,17 @@
   (package-refresh-contents))
 
 (defvar required-packages
-  '(flycheck solarized-theme jinja2-mode markdown-mode etags-table multi-term yaml-mode)
+  '(flycheck
+    solarized-theme
+    jinja2-mode
+    markdown-mode
+    etags-table
+    multi-term
+    scss-mode
+    flymake-sass
+    json-mode
+    flymake-json
+    yaml-mode)
   "Packages which should be installed upon launch")
 
 (dolist (p required-packages)
