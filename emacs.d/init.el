@@ -33,6 +33,11 @@
 (require 'init-jinja)
 (require 'init-git)
 
+(require 'scss-mode)
+(defun cjm-scss-mode-hook()
+  (flycheck-mode t))
+(add-hook 'scss-mode-hook 'cjm-scss-mode-hook)
+
 (require 'yaml-mode)
 (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
 
