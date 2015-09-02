@@ -8,7 +8,7 @@
 
 (function() {
 
-  var butHtml = '<a href="#collapse_diff" style="margin-left: 5px" class="diff-collapse-button minibutton" rel="nofollow">Collapse</a>';
+  var butHtml = '<a href="#collapse_diff" style="margin-left: 5px" class="diff-collapse-button btn btn-sm" rel="nofollow">Collapse</a>';
   var collapsedHtml = '<div class="image diff-collapsed-message" style="display: none"><a href="#" class="expand-diff-link">Diff suppressed. Click to show.</a></div>';
   var filesTab = document.querySelector('[data-container-id="files_bucket"]');
 
@@ -59,7 +59,7 @@
     }
 
     debug('checking if path ' + path + ' should be auto-collapsed');
-    if (startsWith(path, 'static/js/templates/') || endsWith(path, '.css') || endsWith(path, '.svg')) {
+    if (startsWith(path, 'static/js/templates/') || startsWith(path, 'static/dist/') || endsWith(path, '.css') || endsWith(path, '.svg')) {
       debug('auto-collapsing path ' + path);
       collapse(button, tableToToggle, messageDiv);
     }
@@ -85,7 +85,7 @@
     for (i = 0; i < fileContainers.length; ++i) {
       debug('adding collapse toggles for file ' + i);
       bindToggler(fileContainers[i].querySelector('.file-header'),
-        fileContainers[i].querySelector('.diff-table'), true);
+        fileContainers[i].querySelector('table.file-diff, .diff-table'), true);
     }
 
     collapseTogglesAdded = true;
@@ -99,10 +99,11 @@
 
   var keepCheckingFilesTab = function () {
     var checkFilesTab = function () {
+      debug('looking for file containers');
       var fileContainers = getFileContainers();
       if (fileContainers.length) {
+        debug('found ' + fileContainers.length + ' file containers');
         window.clearInterval(intervalId);
-        bindDiffStyleButtons();
         addCollapseToggles(fileContainers);
       }
     };
@@ -110,24 +111,4 @@
   };
 
   filesTab.addEventListener('click', keepCheckingFilesTab, false);
-
-  var bindDiffStyleButtons = function () {
-    var buttons = document.querySelectorAll('#diff .button-group.right .minibutton ');
-    debug("binding diff style buttons, found " + buttons.length);
-    var buttonListener = function () {
-      collapseTogglesAdded = false;
-      keepCheckingFilesTab();
-    };
-    for (var i = 0; i < buttons.length; i++) {
-      debug("handling button " + i);
-      if (!buttons[i].dataset.collapseTogglesListenerAdded) {
-        debug("adding button listener");
-        buttons[i].addEventListener('click', buttonListener, false);
-        buttons[i].dataset.collapseTogglesListenerAdded = "true";
-      }
-    }
-  };
-
-  bindDiffStyleButtons();
-
 })();
