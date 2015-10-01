@@ -21,7 +21,8 @@ alias mk27env="mkvirtualenv -p /home/carljm/pythons/Python-2.7.9/bin/python"
 alias mk32env="mkvirtualenv -p /home/carljm/pythons/Python-3.2.6/bin/python3"
 alias mk33env="mkvirtualenv -p /home/carljm/pythons/Python-3.3.6/bin/python3"
 alias mk34env="mkvirtualenv -p /home/carljm/pythons/Python-3.4.2/bin/python3"
-alias mkpypyenv="mkvirtualenv -p /home/carljm/pythons/pypy-2.4.0-linux64/bin/pypy"
+alias mk35env="mkvirtualenv -p /home/carljm/pythons/Python-3.5.0/bin/python3"
+alias mkpypyenv="mkvirtualenv -p /home/carljm/pythons/pypy-2.6.1-linux64/bin/pypy"
 alias mkpypy3env="mkvirtualenv -p /home/carljm/pythons/pypy3-2.4.0-linux64/bin/pypy"
 alias mkvenv=mk27env
 
