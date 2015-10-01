@@ -30,7 +30,6 @@ transplant =
 hgk =
 pager =
 progress =
-git =
 purge =
 
 [diff]
