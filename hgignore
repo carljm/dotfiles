@@ -6,3 +6,4 @@
 \.emacs\.desktop
 TAGS$
 \.tox
+\.dir-locals.el$
