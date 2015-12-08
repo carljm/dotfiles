@@ -52,3 +52,8 @@ djtests() {
     PYTHONHASHSEED="random" DJANGO_SETTINGS_MODULE=testconf.${DB} coverage run runtests.py $@
     popd
 }
+
+ap8() {
+    file=$1
+    autopep8 --in-place --aggressive --aggressive ${file}
+}
