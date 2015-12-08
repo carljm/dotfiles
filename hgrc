@@ -31,6 +31,7 @@ hgk =
 pager =
 progress =
 purge =
+hggit =
 
 [diff]
 git = True
