@@ -3,18 +3,10 @@ alias rmbak="find . -iname '*~' -delete"
 alias dirsize="/home/carljm/dot/bin/dirsize.sh | sort -n | uniq"
 alias pkgsize='/home/carljm/dot/bin/pkgsize.sh'
 
-alias sshkey="ssh-add /home/carljm/.ssh/romaine_dsa"
-alias sshtp="ssh tp -t screen -URD"
 alias sshlt="echo -ne '\033]0;screen[lettuce]\007' && ssh lt -A -t /home/carljm/dot/bin/scr"
-alias sshpuffin="ssh puffin -t screen -URD"
-alias sshsw="ssh sw"
-alias sshmwr="ssh mwr"
-alias sshrp="ssh rp"
+alias sshqs="echo -ne '\033]0;screen[qatalyst-stage]\007' && ssh qatalyst-stage -A -t /home/cmeyer/dot/bin/scr"
 alias sshcp="ssh cp -t screen -URD"
-alias sshql="ssh ql"
 alias sshbruce="ssh bruce"
-alias sshpmc="ssh pmc"
-alias sshdz="ssh dz -A -t scr"
 
 alias mk26env="mkvirtualenv -p /home/carljm/pythons/Python-2.6.9/bin/python"
 alias mk27env="mkvirtualenv -p /home/carljm/pythons/Python-2.7.9/bin/python"
@@ -27,8 +19,6 @@ alias mkpypy3env="mkvirtualenv -p /home/carljm/pythons/pypy3-2.4.0-linux64/bin/p
 alias mkvenv=mk27env
 
 alias emacs="emacs -nw"
-
-alias fixssh="source ~/.sshvars"
 
 alias rs="redshift -l 44.08:-103.25"
 
