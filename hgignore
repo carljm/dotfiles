@@ -7,3 +7,4 @@
 TAGS$
 \.tox
 \.dir-locals.el$
+local_settings.py$
