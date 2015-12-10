@@ -59,7 +59,7 @@
     }
 
     debug('checking if path ' + path + ' should be auto-collapsed');
-    if (startsWith(path, 'static/js/templates/') || startsWith(path, 'static/dist/') || endsWith(path, '.css') || endsWith(path, '.svg')) {
+    if (startsWith(path, 'static/js/templates/') || startsWith(path, 'static/dist/') || endsWith(path, '.css') || endsWith(path, '.svg') || startsWith(path, 'sassdoc/')) {
       debug('auto-collapsing path ' + path);
       collapse(button, tableToToggle, messageDiv);
     }
