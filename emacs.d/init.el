@@ -77,7 +77,7 @@
  '(js-mode-hook (quote (flycheck-mode)) t)
  '(python-mode-hook (quote (imenu-add-menubar-index flycheck-mode)) t)
  '(require-final-newline (quote visit-save))
- '(safe-local-variable-values (quote ((flycheck-python-flake8-executable . "/home/carljm/.venvs/qatalyst/bin/flake8"))))
+ '(safe-local-variable-values (quote ((flycheck-python-flake8-executable . "/home/carljm/.venvs/qatalyst/bin/flake8") (flycheck-python-flake8-executable . "/home/carljm/.venvs/interview/bin/flake8"))))
  '(same-window-buffer-names (quote ("*shell*" "*mail*" "*inferior-lisp*" "*ielm*" "*scheme*" "*Org Agenda*" "*Agenda Commands*")))
  '(scss-compile-at-save nil)
  '(sgml-basic-offset 2)
