@@ -1,6 +1,6 @@
 export CLICOLOR=1
 
-export PATH=$HOME/dot/bin:$PATH:/usr/local/share/python
+export PATH=$HOME/dot/osx/bin:$HOME/dot/bin:$PATH
 
 eval "$(hub alias -s)"
 
