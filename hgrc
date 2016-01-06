@@ -32,6 +32,8 @@ pager =
 progress =
 purge =
 hggit =
+shelve =
+histedit =
 
 [diff]
 git = True
