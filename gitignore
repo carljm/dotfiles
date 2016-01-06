@@ -9,3 +9,4 @@ TAGS
 .tox
 MANIFEST
 .dir-locals.el
+.cache
