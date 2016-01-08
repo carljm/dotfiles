@@ -84,6 +84,7 @@ channels = (
   { name = "#django-sprint"; chatnet = "FreeNode"; autojoin = "yes"; },
   { name = "#django-south"; chatnet = "FreeNode"; autojoin = "yes"; },
   { name = "#django-social"; chatnet = "FreeNode"; autojoin = "yes"; },
+  { name = "#pyramid"; chatnet = "FreeNode"; autojoin = "yes"; },
   { name = "#distutils"; chatnet = "FreeNode"; autojoin = "yes"; },
   { name = "#pypa"; chatnet = "FreeNode"; autojoin = "yes"; },
   { name = "#pypa-dev"; chatnet = "FreeNode"; autojoin = "yes"; },
