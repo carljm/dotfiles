@@ -2,3 +2,4 @@ emacs.d/auto-save-list
 emacs.d/session.*
 emacs.d/tramp
 emacs.d/elpa
+emacs.d/ido.last
