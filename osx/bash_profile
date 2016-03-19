@@ -6,7 +6,7 @@ eval "$(hub alias -s)"
 
 . ~/dot/bash_aliases
 
-VENVWRAPPER=/usr/local/share/python/virtualenvwrapper.sh
+VENVWRAPPER=/usr/local/bin/virtualenvwrapper.sh
 if [ -n "$VENVWRAPPER" ]; then
   export WORKON_HOME=$HOME/.venvs
   export PROJECT_HOME=$HOME/workspace
