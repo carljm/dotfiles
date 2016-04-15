@@ -96,6 +96,7 @@ channels = (
   { name = "#pylib"; chatnet = "FreeNode"; autojoin = "yes"; },
   { name = "#openhatch"; chatnet = "FreeNode"; autojoin = "yes"; },
   { name = "#pykids"; chatnet = "FreeNode"; autojoin = "yes"; },
+  { name = "#pyramid"; chatnet = "FreeNode"; autojoin = "yes"; },
 );
 
 aliases = {
