@@ -75,14 +75,12 @@ chatnets = {
 };
 
 channels = (
-  { name = "#ateam"; chatnet = "Mozilla"; autojoin = "yes"; },
   { name = "#moztrap"; chatnet = "Mozilla"; autojoin = "yes"; },
   { name = "#webdev"; chatnet = "Mozilla"; autojoin = "yes"; }
   { name = "#django"; chatnet = "FreeNode"; autojoin = "yes"; },
   { name = "#django-dev"; chatnet = "FreeNode"; autojoin = "yes"; },
   { name = "#django-core"; chatnet = "FreeNode"; autojoin = "yes"; },
   { name = "#django-sprint"; chatnet = "FreeNode"; autojoin = "yes"; },
-  { name = "#django-south"; chatnet = "FreeNode"; autojoin = "yes"; },
   { name = "#django-social"; chatnet = "FreeNode"; autojoin = "yes"; },
   { name = "#pyramid"; chatnet = "FreeNode"; autojoin = "yes"; },
   { name = "#distutils"; chatnet = "FreeNode"; autojoin = "yes"; },
@@ -94,8 +92,6 @@ channels = (
   { name = "#python"; chatnet = "FreeNode"; autojoin = "yes"; },
   { name = "#positivepython"; chatnet = "FreeNode"; autojoin = "yes"; },
   { name = "#pylib"; chatnet = "FreeNode"; autojoin = "yes"; },
-  { name = "#openhatch"; chatnet = "FreeNode"; autojoin = "yes"; },
-  { name = "#pykids"; chatnet = "FreeNode"; autojoin = "yes"; },
   { name = "#pyramid"; chatnet = "FreeNode"; autojoin = "yes"; },
 );
 
