@@ -27,8 +27,8 @@ else
   read -p "FreeNode IRC password? " freenode_irc_pw
   read -p "Mozilla IRC password? " mozilla_irc_pw
   cp $src/config $dest
-  perl -pi -e "s/<FREENODE_PW>/$freenode_irc_pw/;" $dest/config
-  perl -pi -e "s/<MOZILLA_PW>/$mozilla_irc_pw/;" $dest/config
+  perl -pi -e "s/{{ freenode_irc_pw }}/$freenode_irc_pw/;" $dest/config
+  perl -pi -e "s/{{ mozilla_irc_pw }}/$mozilla_irc_pw/;" $dest/config
   echo "  linking theme and scripts"
   ln -s $src/solarized-universal.theme $dest/solarized-universal.theme
   ln -s $src/scripts $dest/scripts

@@ -22,7 +22,7 @@ servers = (
     use_ssl = "yes";
     ssl_verify = "yes";
     ssl_capath = "/etc/ssl/certs";
-    password = "<MOZILLA_PW>";
+    password = "{{ mozilla_irc_pw }}";
   },
   {
     address = "chat.freenode.net";
@@ -32,7 +32,7 @@ servers = (
     ssl_verify = "yes";
     ssl_capath = "/etc/ssl/certs";
     autoconnect = "yes";
-    password = "carljm:<FREENODE_PW>";
+    password = "carljm:{{ freenode_irc_pw }}";
   }
 );
 
