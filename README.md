@@ -18,6 +18,7 @@ dependencies, but make use of them if they are present.
 Install with OS package manager:
   - emacs
   - irssi
+  - screen
 
 Install with pip:
   - pycompletion
