@@ -26,7 +26,7 @@ Install with pip:
   - flake8
 
 Install with npm:
-  - jshint
+  - eslint
 
 Compile:
-  - recent versions of Python in /opt, to match aliases in bash_aliases
+  - recent versions of Python in ~/pythons/, to match aliases in bash_aliases
