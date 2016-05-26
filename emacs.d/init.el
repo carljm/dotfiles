@@ -33,6 +33,9 @@
 (require 'init-jinja)
 (require 'init-git)
 
+(require 'hack-mode)
+(add-to-list 'auto-mode-alist '("\\.php$" . hack-mode))
+
 (require 'scss-mode)
 (defun cjm-scss-mode-hook()
   (flycheck-mode t))
@@ -44,6 +47,11 @@
 (require 'multi-term)
 (setq multi-term-program "/bin/bash")
 (global-set-key [f9] 'multi-term)
+
+(setq vc-ignore-dir-regexp
+      (format "\\(%s\\)\\|\\(%s\\)"
+              vc-ignore-dir-regexp
+              tramp-file-name-regexp))
 
 (autoload 'revbufs "revbufs" "Revert all buffers" t)
 
@@ -67,7 +75,15 @@
  ;; If there is more than one, they won't work right.
  '(browse-url-browser-function (quote browse-url-generic))
  '(browse-url-generic-program "firefox")
- '(custom-safe-themes (quote ("8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" default)))
+ '(c-basic-offset 2)
+ '(c-default-style
+   (quote
+    ((java-mode . "java")
+     (awk-mode . "awk")
+     (other . "1tbs"))))
+ '(custom-safe-themes
+   (quote
+    ("8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" default)))
  '(default-frame-alist (quote ((menu-bar-lines . 1))))
  '(etags-table-search-up-depth 10)
  '(fill-column 79)
@@ -77,8 +93,13 @@
  '(js-mode-hook (quote (flycheck-mode)) t)
  '(python-mode-hook (quote (imenu-add-menubar-index flycheck-mode)) t)
  '(require-final-newline (quote visit-save))
- '(safe-local-variable-values (quote ((flycheck-python-flake8-executable . "/home/carljm/.venvs/qatalyst/bin/flake8") (flycheck-python-flake8-executable . "/home/carljm/.venvs/interview/bin/flake8"))))
- '(same-window-buffer-names (quote ("*shell*" "*mail*" "*inferior-lisp*" "*ielm*" "*scheme*" "*Org Agenda*" "*Agenda Commands*")))
+ '(safe-local-variable-values
+   (quote
+    ((flycheck-python-flake8-executable . "/home/carljm/.venvs/qatalyst/bin/flake8")
+     (flycheck-python-flake8-executable . "/home/carljm/.venvs/interview/bin/flake8"))))
+ '(same-window-buffer-names
+   (quote
+    ("*shell*" "*mail*" "*inferior-lisp*" "*ielm*" "*scheme*" "*Org Agenda*" "*Agenda Commands*")))
  '(scss-compile-at-save nil)
  '(sgml-basic-offset 2)
  '(show-paren-mode t)
