@@ -30,11 +30,34 @@ case "$1" in
     ;;
 esac
 
+# This works for Ubuntu 14.04
 gconftool-2 --set "/apps/gnome-terminal/profiles/Default/use_theme_background" --type bool false
 gconftool-2 --set "/apps/gnome-terminal/profiles/Default/use_theme_colors" --type bool false
 gconftool-2 --set "/apps/gnome-terminal/profiles/Default/palette" --type string "$PALETTE"
 gconftool-2 --set "/apps/gnome-terminal/profiles/Default/background_color" --type string "$BG_COLOR"
 gconftool-2 --set "/apps/gnome-terminal/profiles/Default/foreground_color" --type string "$FG_COLOR"
+
+# But in 16.04 terminal uses Gnome3 settings:
+
+# Get default profile ID
+GT_PROFILE_ID=`gsettings get org.gnome.Terminal.ProfilesList default | tail -c +2 | head -c -2`
+SCHEMA="org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:${GT_PROFILE_ID}/"
+
+# set array-format palette for gsettings
+PALETTE_ARRAY="["
+OIFS=$IFS
+IFS=":"
+for color in $PALETTE; do
+    PALETTE_ARRAY="${PALETTE_ARRAY}'${color}', "
+done
+PALETTE_ARRAY="${PALETTE_ARRAY%??}]"
+IFS=$OIFS
+
+gsettings set "$SCHEMA" background-color "$BG_COLOR"
+gsettings set "$SCHEMA" foreground-color "$FG_COLOR"
+gsettings set "$SCHEMA" palette "$PALETTE_ARRAY"
+
+# For guake, this works in both 14.04 and 16.04
 gconftool-2 --set "/apps/guake/style/background/color" --type string "$BG_COLOR"
 gconftool-2 --set "/apps/guake/style/font/color" --type string "$FG_COLOR"
 gconftool-2 --set "/apps/guake/style/font/palette" --type string "$PALETTE"
