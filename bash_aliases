@@ -6,7 +6,7 @@ alias pkgsize='/home/carljm/dot/bin/pkgsize.sh'
 alias sshlt="echo -ne '\033]0;screen[lettuce]\007' && ssh lt -A -t /home/carljm/dot/bin/scr"
 alias sshch="echo -ne '\033]0;screen[chard]\007' && ssh chard.carljm.me -A -t /home/carljm/dot/bin/scr"
 alias sshqs="echo -ne '\033]0;screen[qatalyst-stage]\007' && ssh qatalyst-stage -A -t /home/cmeyer/dot/bin/scr"
-alias sshig="echo -ne '\033]0;tmux[ig]\007' && ssh igds -t 'tmux new -s devserver -AD'"
+alias sshig="echo -ne '\033]0;tmux[ig]\007' && mosh -6 igds -- tmux new -s devserver -AD"
 alias sshcp="ssh cp -t screen -URD"
 alias sshbruce="ssh bruce"
 
