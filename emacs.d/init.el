@@ -19,6 +19,7 @@
     flymake-sass
     json-mode
     flymake-json
+    cython-mode
     yaml-mode)
   "Packages which should be installed upon launch")
 
@@ -85,6 +86,7 @@
    (quote
     ("8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" default)))
  '(default-frame-alist (quote ((menu-bar-lines . 1))))
+ '(enable-remote-dir-locals t)
  '(etags-table-search-up-depth 10)
  '(fill-column 79)
  '(ido-enable-flex-matching t)
@@ -96,7 +98,9 @@
  '(safe-local-variable-values
    (quote
     ((flycheck-python-flake8-executable . "/home/carljm/.venvs/qatalyst/bin/flake8")
-     (flycheck-python-flake8-executable . "/home/carljm/.venvs/interview/bin/flake8"))))
+     (flycheck-python-flake8-executable . "/home/carljm/.venvs/interview/bin/flake8")
+     (flycheck-python-flake8-executable . "/home/carljm/.venvs/django35/bin/flake8")
+     (flycheck-python-flake8-executable . "/home/carljm/.venvs/distillery/bin/flake8"))))
  '(same-window-buffer-names
    (quote
     ("*shell*" "*mail*" "*inferior-lisp*" "*ielm*" "*scheme*" "*Org Agenda*" "*Agenda Commands*")))
