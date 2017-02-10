@@ -69,6 +69,30 @@
 
 (ido-mode)
 
+(defun isort nil
+  "Sort python imports"
+  (interactive)
+  (shell-command-on-region
+   (point-min) (point-max)
+   "isort -"
+   nil t nil t))
+
+(defun my-copy-simple (&optional beg end)
+  "Save the current region (or line) to the `kill-ring' after stripping extra whitespace and new lines"
+  (interactive
+   (if (region-active-p)
+       (list (region-beginning) (region-end))
+     (list (line-beginning-position) (line-end-position))))
+  (let ((my-text (buffer-substring-no-properties beg end)))
+    (with-temp-buffer 
+      (insert my-text)
+      (goto-char 1)
+      (while (looking-at "[ \t\n]")
+        (delete-char 1))
+      (let ((fill-column 9333999))
+        (fill-region (point-min) (point-max)))
+      (kill-region (point-min) (point-max)))))
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -99,8 +123,10 @@
    (quote
     ((flycheck-python-flake8-executable . "/home/carljm/.venvs/qatalyst/bin/flake8")
      (flycheck-python-flake8-executable . "/home/carljm/.venvs/interview/bin/flake8")
+     (flycheck-python-flake8-executable . "/home/carljm/.venvs/wonderclean/bin/flake8")
      (flycheck-python-flake8-executable . "/home/carljm/.venvs/django35/bin/flake8")
-     (flycheck-python-flake8-executable . "/home/carljm/.venvs/distillery/bin/flake8"))))
+     (flycheck-python-flake8-executable . "/home/carljm/.venvs/distillery/bin/flake8")
+     (flycheck-python-flake8-executable . "/home/carljm/.venvs/wonderment/bin/flake8"))))
  '(same-window-buffer-names
    (quote
     ("*shell*" "*mail*" "*inferior-lisp*" "*ielm*" "*scheme*" "*Org Agenda*" "*Agenda Commands*")))
