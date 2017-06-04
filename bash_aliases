@@ -18,7 +18,7 @@ alias mk34env="mkvirtualenv -p /home/carljm/pythons/Python-3.4.4/bin/python3"
 alias mk35env="mkvirtualenv -p /home/carljm/pythons/Python-3.5.1/bin/python3"
 alias mk36env="mkvirtualenv -p /home/carljm/pythons/Python-3.6.0/bin/python3"
 alias mkpypyenv="mkvirtualenv -p /home/carljm/pythons/pypy-5.1.1-linux_x86_64-portable/bin/pypy"
-alias mkpypy3env="mkvirtualenv -p /home/carljm/pythons/pypy3-2.4-linux_x86_64-portable/bin/pypy"
+alias mkpypy3env="mkvirtualenv -p /home/carljm/pythons/pypy3.5-5.7.1-beta-linux_x86_64-portable/bin/pypy"
 alias mkvenv=mk27env
 
 alias emacs="emacs -nw"
