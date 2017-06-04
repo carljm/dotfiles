@@ -10,9 +10,7 @@ alias sshig="echo -ne '\033]0;tmux[ig]\007' && mosh -6 igds -- tmux new -s devse
 alias sshcp="ssh cp -t screen -URD"
 alias sshbruce="ssh bruce"
 
-alias mk26env="mkvirtualenv -p /home/carljm/pythons/Python-2.6.9/bin/python"
-alias mk27env="mkvirtualenv -p /home/carljm/pythons/Python-2.7.11/bin/python"
-alias mk32env="mkvirtualenv -p /home/carljm/pythons/Python-3.2.6/bin/python3"
+alias mk27env="mkvirtualenv -p /home/carljm/pythons/Python-2.7.13/bin/python"
 alias mk33env="mkvirtualenv -p /home/carljm/pythons/Python-3.3.6/bin/python3"
 alias mk34env="mkvirtualenv -p /home/carljm/pythons/Python-3.4.4/bin/python3"
 alias mk35env="mkvirtualenv -p /home/carljm/pythons/Python-3.5.1/bin/python3"
