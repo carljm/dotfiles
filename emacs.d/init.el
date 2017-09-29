@@ -1,5 +1,10 @@
 (add-to-list 'load-path "~/.emacs.d/lisp" load-path)
 
+; https://lists.gnu.org/archive/html/emacs-devel/2017-09/msg00211.html
+(eval-after-load "enriched"
+  '(defun enriched-decode-display-prop (start end &optional param)
+     (list start end)))
+
 (require 'package)
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.milkbox.net/packages/") t)
@@ -44,6 +49,8 @@
 
 (require 'yaml-mode)
 (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
+
+(add-to-list 'auto-mode-alist '("\\.pyi$" . python-mode))
 
 (require 'multi-term)
 (setq multi-term-program "/bin/bash")
@@ -125,6 +132,7 @@
      (flycheck-python-flake8-executable . "/home/carljm/.venvs/interview/bin/flake8")
      (flycheck-python-flake8-executable . "/home/carljm/.venvs/wonderclean/bin/flake8")
      (flycheck-python-flake8-executable . "/home/carljm/.venvs/django35/bin/flake8")
+     (flycheck-python-flake8-executable . "/home/carljm/.venvs/lru/bin/flake8")
      (flycheck-python-flake8-executable . "/home/carljm/.venvs/distillery/bin/flake8")
      (flycheck-python-flake8-executable . "/home/carljm/.venvs/wonderment/bin/flake8"))))
  '(same-window-buffer-names
