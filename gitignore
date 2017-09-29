@@ -11,3 +11,4 @@ MANIFEST
 .dir-locals.el
 .cache
 .DS_Store
+.coverage.*
