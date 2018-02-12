@@ -29,3 +29,5 @@
 
 [grep]
         patternType = extended
+[commit]
+	gpgsign = true
