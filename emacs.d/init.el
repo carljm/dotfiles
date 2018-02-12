@@ -128,7 +128,8 @@
  '(require-final-newline (quote visit-save))
  '(safe-local-variable-values
    (quote
-    ((flycheck-python-flake8-executable . "/home/carljm/.venvs/qatalyst/bin/flake8")
+    ((flycheck-python-flake8-executable . "/home/carljm/.venvs/books/bin/flake8")
+     (flycheck-python-flake8-executable . "/home/carljm/.venvs/MonkeyType-sRi3GbGp/bin/flake8")
      (flycheck-python-flake8-executable . "/home/carljm/.venvs/interview/bin/flake8")
      (flycheck-python-flake8-executable . "/home/carljm/.venvs/wonderclean/bin/flake8")
      (flycheck-python-flake8-executable . "/home/carljm/.venvs/django35/bin/flake8")
