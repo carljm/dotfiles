@@ -1,6 +1,0 @@
-!#/bin/bash
-
-for f in *.ogg; do
-    avconv -i "${f}" -c:a libmp3lame -q:a 2 "${f%.ogg}.mp3"
-    operon copy "${f}" "${f%.ogg}.mp3"
-done

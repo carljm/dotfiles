@@ -1,27 +1,19 @@
+source $HOME/dot/osx/git-completion.bash
+
+export VIRTUALENVWRAPPER_PYTHON="/usr/local/bin/python3"
+
+source $HOME/dot/bash_custom
+
 export CLICOLOR=1
 
-export PATH=$HOME/dot/osx/bin:$HOME/dot/bin:$PATH
+export EDITOR="/Applications/Emacs.app/Contents/MacOS/Emacs -nw"
 
-eval "$(hub alias -s)"
+export PATH=$HOME/dot/osx/bin:$PATH
 
-. ~/dot/bash_aliases
-
-VENVWRAPPER=/usr/local/bin/virtualenvwrapper.sh
 if [ -n "$VENVWRAPPER" ]; then
-  export WORKON_HOME=$HOME/.venvs
-  export PROJECT_HOME=$HOME/workspace
-  source $VENVWRAPPER
-
-  alias mk26env="mkvirtualenv -p /usr/local/bin/python2.6"
   alias mk27env="mkvirtualenv -p /usr/local/bin/python2.7"
-  alias mk32env="mkvirtualenv -p /usr/local/bin/python3.2"
-  alias mk33env="mkvirtualenv -p /usr/local/bin/python3.3"
-
+  alias mk36env="mkvirtualenv -p /usr/local/bin/python3.6"
+  alias mkvenv=mk36env
 fi
 
-. ~/dot/osx/git-completion.bash
-. ~/dot/bash_prompt
-
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
+alias sshig="et carljm.sb.facebook.com:8080 -c 'tmux -2CC new -A -s devserver'"

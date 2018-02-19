@@ -1,22 +1,9 @@
-umask 002
-export EDITOR="/usr/bin/emacs -nw"
-
-PYCOMPLETION=`which pycompletion 2>/dev/null`
-if [ -n "$PYCOMPLETION" ]; then
-  . $PYCOMPLETION
-fi
-
 VENVWRAPPER=`which virtualenvwrapper.sh 2>/dev/null`
 if [ -n "$VENVWRAPPER" ]; then
   export WORKON_HOME=$HOME/.venvs
   export PROJECT_HOME=$HOME/projects
   source $VENVWRAPPER
 fi
-
-source ~/dot/bash_prompt
-source ~/dot/bash_aliases
-
-eval `dircolors ~/dot/dircolors`
 
 export HISTCONTROL=ignoreboth
 export HISTSIZE=100000
@@ -27,7 +14,4 @@ export PATH=$HOME/dot/bin:$HOME/.local/bin:/usr/local/go/bin:$HOME/go/bin:$PATH
 export GOPATH=$HOME/go
 
 eval "$(hub alias -s)"
-
-if [ -f ~/hub.bash_completion.sh ]; then
-    . ~/hub.bash_completion.sh
-fi
+source $HOME/dot/hub.bash_completion.sh

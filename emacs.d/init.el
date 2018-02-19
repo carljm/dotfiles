@@ -18,7 +18,6 @@
     solarized-theme
     jinja2-mode
     markdown-mode
-    etags-table
     multi-term
     scss-mode
     flymake-sass
@@ -66,13 +65,9 @@
 (add-to-list 'auto-mode-alist '("\\.md" . markdown-mode))
 
 ; from http://www.emacswiki.org/emacs/CopyAndPaste
-(global-set-key "\C-x\C-k" 'clipboard-kill-region)
+(global-set-key "\C-w" 'clipboard-kill-region)
 (global-set-key "\M-w" 'clipboard-kill-ring-save)
 (global-set-key "\C-y" 'clipboard-yank)
-
-; from https://sites.google.com/site/steveyegge2/effective-emacs
-(global-set-key "\C-w" 'backward-kill-word)
-(global-set-key "\C-x\C-m" 'execute-extended-command)
 
 (ido-mode)
 
