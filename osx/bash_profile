@@ -7,6 +7,7 @@ source $HOME/dot/bash_custom
 export CLICOLOR=1
 
 export EDITOR="/Applications/Emacs.app/Contents/MacOS/Emacs -nw"
+alias emacs="$EDITOR"
 
 export PATH=$HOME/dot/osx/bin:$PATH
 
