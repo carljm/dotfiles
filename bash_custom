@@ -15,3 +15,4 @@ export GOPATH=$HOME/go
 
 eval "$(hub alias -s)"
 source $HOME/dot/hub.bash_completion.sh
+source $HOME/dot/bash_prompt
