@@ -31,7 +31,6 @@ hgk =
 pager =
 progress =
 purge =
-shelve =
 histedit =
 
 [diff]
