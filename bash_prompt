@@ -3,35 +3,34 @@
 # from https://github.com/bitprophet/dotfiles/blob/master/.bash_prompt
 #
 
-# Color codes
-RED='\[\033[01;31m\]'
-GREEN='\[\033[01;32m\]'
-YELLOW='\[\033[01;33m\]'
-BLUE='\[\033[01;34m\]'
-PURPLE='\[\033[01;35m\]'
-CYAN='\[\033[01;36m\]'
-WHITE='\[\033[01;37m\]'
-NIL='\[\033[00m\]'
-
-# Hostname styles
-FULL='\H'
-SHORT='\h'
-
-# System => color/hostname map:
-# UC: username color
-# LC: location/cwd color
-# HD: hostname display (\h vs \H)
-# Defaults:
-UC=$GREEN
-LC=$BLUE
-HD=$SHORT
-
-HOST=`hostname | cut -d '.' -f 1`
-DOMAIN=`hostname | cut -d '.' -f 2-`
-
+export PROMPT_HOST=`hostname | cut -d '.' -f 1`
 
 # Prompt function because PROMPT_COMMAND is awesome
 function set_prompt() {
+
+    # Color codes
+    RED='\[\033[01;31m\]'
+    GREEN='\[\033[01;32m\]'
+    YELLOW='\[\033[01;33m\]'
+    BLUE='\[\033[01;34m\]'
+    PURPLE='\[\033[01;35m\]'
+    CYAN='\[\033[01;36m\]'
+    WHITE='\[\033[01;37m\]'
+    NIL='\[\033[00m\]'
+
+    # Hostname styles
+    FULL='\H'
+    SHORT='\h'
+
+    # System => color/hostname map:
+    # UC: username color
+    # LC: location/cwd color
+    # HD: hostname display (\h vs \H)
+    # Defaults:
+    UC=$GREEN
+    LC=$BLUE
+    HD=$SHORT
+
     host="${UC}${HD}${NIL}"
 
     # Special vim-tab-like shortpath (~/folder/directory/foo => ~/f/d/foo)
@@ -80,7 +79,7 @@ function set_prompt() {
 
     # include host in terminal title only if not local host
     if [[ -n $SSH_CLIENT ]]; then
-        shorthost="${HOST}:"
+        shorthost="${PROMPT_HOST}:"
     else
         shorthost=""
     fi
@@ -99,3 +98,4 @@ function set_prompt() {
     export PS1="${title}\n${time} ${user}@${host}:${path}${branch}${venv} ${end}"
 }
 export PROMPT_COMMAND=set_prompt
+export -f set_prompt
