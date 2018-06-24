@@ -38,6 +38,9 @@
 (require 'init-jinja)
 (require 'init-git)
 
+(require 'blacken)
+(defvar blacken-executable "/usr/local/bin/black")
+
 (require 'hack-mode)
 (add-to-list 'auto-mode-alist '("\\.php$" . hack-mode))
 

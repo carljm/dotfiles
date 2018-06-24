@@ -4,3 +4,6 @@
 [submodule "phabricator/arcanist"]
 	path = phabricator/arcanist
 	url = https://github.com/phacility/arcanist.git
+[submodule "blacken"]
+	path = blacken
+	url = https://github.com/proofit404/blacken/
