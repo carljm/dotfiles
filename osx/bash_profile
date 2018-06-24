@@ -18,3 +18,6 @@ if [ -n "$VENVWRAPPER" ]; then
 fi
 
 alias sshig="et carljm.sb.facebook.com:8080 -c 'tmux -2CC new -AD -s devserver'"
+alias sshch="ssh chard.carljm.me -A -t /home/carljm/dot/bin/scr"
+
+[[ -s $HOME/.pythonz/etc/bashrc ]] && source $HOME/.pythonz/etc/bashrc
