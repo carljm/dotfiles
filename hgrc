@@ -28,7 +28,6 @@ rebase =
 color =
 transplant =
 hgk =
-pager =
 progress =
 purge =
 histedit =
