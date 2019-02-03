@@ -15,7 +15,7 @@ else
   source $HOME/dot/linux/install.sh
 fi
 
-for fn in gitconfig screenrc emacs.d hgrc; do
+for fn in gitconfig screenrc emacs.d hgrc vimrc; do
   src="$HOME/dot/${fn}"
   dest="$HOME/.${fn}"
   if [ -e $dest ]; then
