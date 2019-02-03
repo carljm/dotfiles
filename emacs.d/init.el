@@ -38,6 +38,9 @@
 (require 'init-jinja)
 (require 'init-git)
 
+(require 'beancount)
+(add-to-list 'auto-mode-alist '("\\.beancount\\'" . beancount-mode))
+
 (require 'blacken)
 (defvar blacken-executable "/usr/local/bin/black")
 
