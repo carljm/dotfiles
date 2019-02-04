@@ -4,8 +4,8 @@ set nocompatible
 filetype off
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+set rtp+=~/.vundle/Vundle.vim
+call vundle#begin("~/.vundle")
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'nathangrigg/vim-beancount'
 call vundle#end()
