@@ -16,6 +16,7 @@ zstyle ':prezto:load' pmodule \
   'utility' \
   'completion' \
   'prompt' \
+  'history-substring-search' \
   'python' \
   'git' \
   'node'
