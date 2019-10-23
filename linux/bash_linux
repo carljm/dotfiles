@@ -1,3 +1,5 @@
+export PATH=$HOME/dot/linux/bin:$PATH
+
 source $HOME/dot/bash_custom
 
 alias pkgsize='/home/carljm/dot/bin/pkgsize.sh'
@@ -18,7 +20,5 @@ alias rs="redshift -l 44.08:-103.25"
 export EDITOR="/usr/bin/emacs -nw"
 
 eval `dircolors ~/dot/dircolors`
-
-export PATH=$HOME/dot/linux/bin:$PATH
 
 alias sshig="echo -ne '\033]0;tmux[ig]\007' && mosh -6 igds -- tmux new -s devserver -AD"
