@@ -11,13 +11,25 @@ alias emacs="$EDITOR"
 
 export PATH=$HOME/dot/osx/bin:$PATH
 
-if [ -n "$VENVWRAPPER" ]; then
-  alias mk27env="mkvirtualenv -p /usr/local/bin/python2.7"
-  alias mk36env="mkvirtualenv -p /usr/local/bin/python3.6"
-  alias mkvenv=mk36env
-fi
-
 alias sshig="et carljm.sb.facebook.com:8080 -c 'tmux -2CC new -AD -s devserver'"
 alias sshch="ssh chard.carljm.me -A -t /home/carljm/dot/bin/scr"
 
+export LDFLAGS="-L/usr/local/opt/zlib/lib -L/usr/local/opt/sqlite/lib -L/usr/local/opt/openssl/lib"
+export CPPFLAGS="-I/usr/local/opt/zlib/include -I/usr/local/opt/sqlite/include -I/usr/local/opt/openssl/include"
+
 [[ -s $HOME/.pythonz/etc/bashrc ]] && source $HOME/.pythonz/etc/bashrc
+
+if [ -n "$VENVWRAPPER" ]; then
+    alias mk27env="mkvirtualenv -p $(pythonz locate 2.7.16)"
+    alias mk36env="mkvirtualenv -p $(pythonz locate 3.6.8)"
+    alias mk37env="mkvirtualenv -p $(pythonz locate 3.7.3)"
+    alias mkvenv=mk37env
+fi
+
+
+
+export PATH="$HOME/.cargo/bin:$PATH"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
