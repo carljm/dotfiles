@@ -7,6 +7,6 @@
 [submodule "blacken"]
 	path = blacken
 	url = https://github.com/proofit404/blacken/
-[submodule "oh-my-zsh"]
-	path = oh-my-zsh
-	url = ./oh-my-zsh
+[submodule "prezto"]
+	path = prezto
+	url = https://github.com/sorin-ionescu/prezto.git
