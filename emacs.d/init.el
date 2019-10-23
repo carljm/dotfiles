@@ -19,6 +19,7 @@
     jinja2-mode
     markdown-mode
     multi-term
+    muse
     scss-mode
     flymake-sass
     json-mode
@@ -46,6 +47,12 @@
 
 (require 'hack-mode)
 (add-to-list 'auto-mode-alist '("\\.php$" . hack-mode))
+
+(require 'muse-mode)
+(require 'muse-wiki)
+
+(setq muse-project-alist
+      '(("dnd" ("~/org/dnd/2019.04.07" :default "TheNarrative"))))
 
 (require 'scss-mode)
 (defun cjm-scss-mode-hook()
@@ -125,6 +132,9 @@
  '(indent-tabs-mode nil)
  '(js-indent-level 2)
  '(js-mode-hook (quote (flycheck-mode)) t)
+ '(package-selected-packages
+   (quote
+    (muse yaml-mode solarized-theme scss-mode multi-term markdown-mode json-mode jinja2-mode flymake-sass flymake-json flycheck cython-mode)))
  '(python-mode-hook (quote (imenu-add-menubar-index flycheck-mode)) t)
  '(require-final-newline (quote visit-save))
  '(safe-local-variable-values
