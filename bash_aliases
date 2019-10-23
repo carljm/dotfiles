@@ -2,8 +2,6 @@ alias rmpyc="find . \( -name '*.pyc' -o -name '__pycache__' \) -print0 | xargs -
 alias rmbak="find . -iname '*~' -delete"
 alias dirsize="/home/carljm/dot/bin/dirsize.sh | sort -n | uniq"
 
-alias sshch="echo -ne '\033]0;screen[chard]\007' && ssh chard.carljm.me -A -t /home/carljm/dot/bin/scr"
-
 alias emacs="emacs -nw"
 
 alias g=git
