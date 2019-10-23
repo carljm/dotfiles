@@ -1,12 +1,10 @@
 My dotfiles
 ===========
 
-For stuff to work, must be cloned to `~/dot`.
+For stuff to work, must be cloned to `~/dot` with the `--recurse-submodules`
+option.
 
-Then run `install.sh`, which just symlinks some files into `~` and sets up the
-shell (on OS X, it symlinks `~/dot/osx/bash_profile` to `~/.bash_profile`, on
-Linux it appends a bit of code to your existing `~/.bashrc` to source
-`~/dot/linux/bash_linux`).
+Then run `~/dot/install.sh`, which just symlinks some dotfiles into `~`.
 
 Everything `install.sh` does is idempotent, so you can safely run it more than
 once, or re-run it later if something new is added.
@@ -19,9 +17,7 @@ Generally, the dotfiles will gracefully handle the absence of these
 dependencies, but make use of them if they are present.
 
 Install with OS package manager:
-  - emacs 25
-  - irssi
-  - screen
+  - emacs
 
 Install with pip:
   - virtualenv
@@ -30,9 +26,6 @@ Install with pip:
 
 Install with npm/yarn:
   - eslint
-
-Compile (on Linux):
-  - recent versions of Python in ~/pythons/, to match aliases in bash_aliases
 
 Install via Homebrew (on OS X):
   - python
