@@ -5,7 +5,7 @@ if [ ! -f "$HOME/dot/osx/install.sh" ]; then
   exit 1
 fi
 
-for fn in bash_profile zshrc; do
+for fn in bash_profile; do
   src="$HOME/dot/osx/${fn}"
   dest="$HOME/.${fn}"
   if [ -e $dest ]; then
