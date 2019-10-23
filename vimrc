@@ -8,6 +8,11 @@ set rtp+=~/.vundle/Vundle.vim
 call vundle#begin("~/.vundle")
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'nathangrigg/vim-beancount'
+Plugin 'pangloss/vim-javascript'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'posva/vim-vue'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'python-mode/python-mode'
 call vundle#end()
 filetype plugin indent on
 syntax on
