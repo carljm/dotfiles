@@ -9,6 +9,10 @@ Then run `~/dot/install.sh`, which just symlinks some dotfiles into `~`.
 Everything `install.sh` does is idempotent, so you can safely run it more than
 once, or re-run it later if something new is added.
 
+For the spaceship prompt theme to work, on your local machine (not on remote
+servers), run `./install.sh` inside `powerline-fonts/` submodule and set your
+terminal to use one of the Powerline fonts.
+
 
 Dependencies
 ------------
