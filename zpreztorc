@@ -17,7 +17,8 @@ zstyle ':prezto:load' pmodule \
   'completion' \
   'prompt' \
   'python' \
-  'git'
+  'git' \
+  'node'
 
 # Set the key mapping style to 'emacs' or 'vi'.
 zstyle ':prezto:module:editor' key-bindings 'vi'
