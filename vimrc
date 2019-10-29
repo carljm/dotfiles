@@ -17,6 +17,8 @@ call vundle#end()
 filetype plugin indent on
 syntax on
 
+let g:pymode_options_max_line_length = 90
+
 nnoremap <silent> <F5> :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <Bar> :unlet _s <CR>
 
 "------------------------------------------------------------
