@@ -22,14 +22,16 @@ zstyle ':prezto:load' pmodule \
   'utility' \
   'completion' \
   'contrib-prompt' \
+  'syntax-highlighting' \
   'prompt' \
   'history-substring-search' \
+  'autosuggestions' \
   'python' \
   'git' \
   'node'
 
 # Set the key mapping style to 'emacs' or 'vi'.
-zstyle ':prezto:module:editor' key-bindings 'vi'
+zstyle ':prezto:module:editor' key-bindings 'emacs'
 
 # Allow the zsh prompt context to be shown.
 zstyle ':prezto:module:editor' ps-context 'yes'
@@ -38,4 +40,3 @@ zstyle ':prezto:module:editor' ps-context 'yes'
 # Setting it to 'random' loads a random theme.
 # Auto set to 'off' on dumb terminals.
 zstyle ':prezto:module:prompt' theme 'spaceship'
-

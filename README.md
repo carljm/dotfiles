@@ -13,6 +13,11 @@ For the spaceship prompt theme to work, on your local machine (not on remote
 servers), run `./install.sh` inside `powerline-fonts/` submodule and set your
 terminal to use one of the Powerline fonts.
 
+The vim config relies on Vundle being cloned at `~/.vundle/Vundle.vim` (note
+this is not the default shown in the Vundle docs.) E.g. `git clone
+https://github.com/VundleVim/Vundle.vim.git ~/.vundle/Vundle.vim`, then after
+installing the dotfiles, run `:PluginInstall` in vim.
+
 
 Dependencies
 ------------
@@ -21,7 +26,7 @@ Generally, the dotfiles will gracefully handle the absence of these
 dependencies, but make use of them if they are present.
 
 Install with OS package manager:
-  - emacs
+  - emacs and vim
 
 Install with pip:
   - virtualenv
