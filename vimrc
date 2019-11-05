@@ -13,11 +13,17 @@ Plugin 'leafgarland/typescript-vim'
 Plugin 'posva/vim-vue'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'python-mode/python-mode'
+Plugin 'tpope/vim-commentary'
+Plugin 'rust-lang/rust.vim'
 call vundle#end()
 filetype plugin indent on
 syntax on
 
 let g:pymode_options_max_line_length = 90
+let g:ctrlp_custom_ignore = {
+  \ 'dir': '\v[\/](\.(git|hg|svn|tox)|node_modules|htmlcov|jscov|_?build)$',
+  \ 'file': '\v\.(exe|so|dll|png|jpg|jpeg|pyc|swp)$',
+\}
 
 nnoremap <silent> <F5> :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <Bar> :unlet _s <CR>
 
