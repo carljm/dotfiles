@@ -28,6 +28,9 @@ dependencies, but make use of them if they are present.
 Install with OS package manager:
   - emacs and vim
 
+Install via their install script
+  - nvm
+
 Install with pip:
   - virtualenv
   - virtualenvwrapper
