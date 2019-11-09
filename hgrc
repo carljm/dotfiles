@@ -20,13 +20,10 @@ qstatus = status --rev qparent
 churn =
 graphlog =
 convert =
-record =
 mq =
-fetch =
 gpg =
 rebase =
 color =
-transplant =
 hgk =
 progress =
 purge =
@@ -41,3 +38,6 @@ attend = log, glog, slog, nlog, dlog, sglog, diff, qdiff, annotate
 
 [gpg]
 key = carl@oddbird.net
+
+[hint]
+ack = branch-command-deprecate
