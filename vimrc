@@ -16,6 +16,7 @@ Plugin 'python-mode/python-mode'
 Plugin 'tpope/vim-commentary'
 Plugin 'rust-lang/rust.vim'
 Plugin 'sjl/vitality.vim'
+Plugin 'vimwiki/vimwiki'
 call vundle#end()
 filetype plugin indent on
 syntax on
