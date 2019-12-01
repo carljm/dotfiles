@@ -26,6 +26,7 @@ let g:ctrlp_custom_ignore = {
   \ 'dir': '\v[\/](\.(git|hg|svn|tox)|node_modules|htmlcov|jscov|_?build)$',
   \ 'file': '\v\.(exe|so|dll|png|jpg|jpeg|pyc|swp)$',
 \}
+let g:vimwiki_list = [{'path': '~/Documents/Carl/dnd/'}]
 
 nnoremap <silent> <F5> :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <Bar> :unlet _s <CR>
 
