@@ -10,6 +10,9 @@ zstyle ':prezto:*:*' color 'yes'
 # Enable exit code of last command in spaceship prompt
 SPACESHIP_EXIT_CODE_SHOW=true
 
+# Disable pyenv in prompt
+SPACESHIP_PYENV_SHOW=false
+
 # Set the Prezto modules to load (browse modules).
 # The order matters.
 zstyle ':prezto:load' pmodule \
