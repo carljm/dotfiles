@@ -26,7 +26,7 @@ if [[ -n "$HUB" ]]; then
     eval "$(hub alias -s)"
 fi
 
-alias sshig="et carljm.sb.facebook.com:8080 -c 'tmux -2CC new -AD -s devserver'"
+alias sshig="et carljm@carljm.sb.facebook.com:8080 -c 'tmux -2CC new -AD -s devserver'"
 
 # for compiling Python
 export LDFLAGS="-L/usr/local/opt/zlib/lib -L/usr/local/opt/sqlite/lib -L/usr/local/opt/openssl/lib"
@@ -41,5 +41,6 @@ if [[ -s $HOME/.pythonz/etc/bashrc ]]; then
     alias mk27env="mkvirtualenv -p $(pythonz locate 2.7.16)"
     alias mk36env="mkvirtualenv -p $(pythonz locate 3.6.8)"
     alias mk37env="mkvirtualenv -p $(pythonz locate 3.7.3)"
+    alias mk38env="mkvirtualenv -p $(pythonz locate 3.8.7)"
     alias mkvenv=mk37env
 fi
