@@ -21,11 +21,6 @@ fi
 
 export GOPATH=$HOME/go
 
-HUB=`which hub 2>/dev/null`
-if [[ -n "$HUB" ]]; then
-    eval "$(hub alias -s)"
-fi
-
 alias sshig="et carljm@carljm.sb.facebook.com:8080 -c 'tmux -2CC new -AD -s devserver'"
 
 # for compiling Python
