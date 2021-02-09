@@ -33,9 +33,18 @@ export PROJECT_HOME=$HOME/projects
 
 if [[ -s $HOME/.pythonz/etc/bashrc ]]; then
     source $HOME/.pythonz/etc/bashrc
-    alias mk27env="mkvirtualenv -p $(pythonz locate 2.7.16)"
-    alias mk36env="mkvirtualenv -p $(pythonz locate 3.6.8)"
-    alias mk37env="mkvirtualenv -p $(pythonz locate 3.7.3)"
+    alias mk27env="mkvirtualenv -p $(pythonz locate 2.7.18)"
+    alias mk37env="mkvirtualenv -p $(pythonz locate 3.7.9)"
     alias mk38env="mkvirtualenv -p $(pythonz locate 3.8.7)"
-    alias mkvenv=mk37env
+    alias mk39env="mkvirtualenv -p $(pythonz locate 3.9.1)"
+    alias mkvenv=mk39env
+    function pythonz() {
+      EXTRA_CONFIGURE_FLAGS="--with-openssl=$(brew --prefix openssl)"
+      if [[ "$1" == "install" ]]; then
+        shift 1
+        command pythonz install $1 --configure="$EXTRA_CONFIGURE_FLAGS"
+      else
+        command pythonz "$@"
+      fi
+    }  
 fi
