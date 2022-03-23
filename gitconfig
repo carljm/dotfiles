@@ -31,3 +31,5 @@
         patternType = extended
 [commit]
 	gpgsign = true
+[init]
+	defaultBranch = main
