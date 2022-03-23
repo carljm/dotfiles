@@ -17,11 +17,13 @@ Plugin 'tpope/vim-commentary'
 Plugin 'rust-lang/rust.vim'
 Plugin 'sjl/vitality.vim'
 Plugin 'vimwiki/vimwiki'
+Plugin 'jamessan/vim-gnupg'
 call vundle#end()
 filetype plugin indent on
 syntax on
 
 let g:pymode_options_max_line_length = 90
+let g:pymode_python = 'python3'
 let g:ctrlp_custom_ignore = {
   \ 'dir': '\v[\/](\.(git|hg|svn|tox)|node_modules|htmlcov|jscov|_?build)$',
   \ 'file': '\v\.(exe|so|dll|png|jpg|jpeg|pyc|swp)$',
