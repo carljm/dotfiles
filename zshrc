@@ -31,20 +31,12 @@ export VIRTUALENVWRAPPER_PYTHON="/usr/local/bin/python3"
 export WORKON_HOME=$HOME/.venvs
 export PROJECT_HOME=$HOME/projects
 
-if [[ -s $HOME/.pythonz/etc/bashrc ]]; then
-    source $HOME/.pythonz/etc/bashrc
-    alias mk27env="mkvirtualenv -p $(pythonz locate 2.7.18)"
-    alias mk37env="mkvirtualenv -p $(pythonz locate 3.7.9)"
-    alias mk38env="mkvirtualenv -p $(pythonz locate 3.8.7)"
-    alias mk39env="mkvirtualenv -p $(pythonz locate 3.9.1)"
-    alias mkvenv=mk39env
-    function pythonz() {
-      EXTRA_CONFIGURE_FLAGS="--with-openssl=$(brew --prefix openssl)"
-      if [[ "$1" == "install" ]]; then
-        shift 1
-        command pythonz install $1 --configure="$EXTRA_CONFIGURE_FLAGS"
-      else
-        command pythonz "$@"
-      fi
-    }  
+if [[ -d $HOME/.pyenv/shims ]]; then
+    path=($HOME/.pyenv/shims $path)
+    alias mk37env="mkvirtualenv -p $(pyenv which python3.7)"
+    alias mk38env="mkvirtualenv -p $(pyenv which python3.8)"
+    alias mk39env="mkvirtualenv -p $(pyenv which python3.9)"
+    alias mk310env="mkvirtualenv -p $(pyenv which python3.10)"
+    alias mkvenv=mk310env
+    eval "$(pyenv init -)"
 fi
