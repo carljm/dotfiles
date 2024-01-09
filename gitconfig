@@ -1,7 +1,6 @@
 [user]
 	name = Carl Meyer
-	email = carl@oddbird.net
-	signingkey = carl@oddbird.net
+	email = carljm@meta.com
 
 [alias]
 	co = checkout
@@ -29,7 +28,11 @@
 
 [grep]
         patternType = extended
-[commit]
-	gpgsign = true
+
 [init]
 	defaultBranch = main
+
+[http]
+  proxy = https://fwdproxy:8082
+  proxySSLCert=/var/facebook/credentials/carljm/x509/carljm.pem
+  proxySSLKey=/var/facebook/credentials/carljm/x509/carljm.pem
