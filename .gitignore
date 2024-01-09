@@ -3,3 +3,4 @@ emacs.d/session.*
 emacs.d/tramp
 emacs.d/elpa
 emacs.d/ido.last
+vim/.netrwhist
