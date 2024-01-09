@@ -17,11 +17,9 @@ nudge = push --rev .
 qstatus = status --rev qparent
 
 [extensions]
-churn =
 graphlog =
 convert =
 mq =
-gpg =
 rebase =
 color =
 hgk =

@@ -29,7 +29,7 @@ else
   echo "Adding source of ~/dot/linux/bash_linux to ~/.bashrc"
   cat >> "$HOME/.bashrc" <<EOF
 if [ -f ~/dot/linux/bash_linux ]; then
-	. ~/dot/bash_linux
+	. ~/dot/linux/bash_linux
 fi
 EOF
 fi
