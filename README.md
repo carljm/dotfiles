@@ -42,4 +42,3 @@ Install with npm/yarn:
 Install via Homebrew (on OS X):
   - python
   - python3
-  - hub

@@ -13,6 +13,4 @@ export PATH=$HOME/dot/bin:$HOME/.local/bin:/usr/local/go/bin:$HOME/go/bin:$PATH
 
 export GOPATH=$HOME/go
 
-eval "$(hub alias -s)"
-source $HOME/dot/hub.bash_completion.sh
 source $HOME/dot/bash_prompt
