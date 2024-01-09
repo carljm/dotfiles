@@ -17,8 +17,6 @@ fi
 
 alias rs="redshift -l 44.08:-103.25"
 
-export EDITOR="/usr/bin/emacs -nw"
-
 eval `dircolors ~/dot/dircolors`
 
 alias sshig="echo -ne '\033]0;tmux[ig]\007' && mosh -6 igds -- tmux new -s devserver -AD"
