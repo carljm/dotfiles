@@ -18,6 +18,7 @@ Plugin 'rust-lang/rust.vim'
 Plugin 'sjl/vitality.vim'
 Plugin 'vimwiki/vimwiki'
 Plugin 'jamessan/vim-gnupg'
+Plugin 'sheerun/vim-polyglot'
 call vundle#end()
 filetype plugin indent on
 syntax on
