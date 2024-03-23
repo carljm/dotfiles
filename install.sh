@@ -25,3 +25,12 @@ for fn in gitconfig screenrc emacs.d hgrc vimrc vim zshrc zlogin zprofile zprezt
     ln -s $src $dest
   fi
 done
+
+src="$HOME/dot/nvim"
+dest="$HOME/.config/nvim"
+if [ -e $dest ]; then
+    echo "skipping nvim; already exists in .config/nvim"
+else
+    echo "linking nvim"
+    ln -s $src $dest
+fi
