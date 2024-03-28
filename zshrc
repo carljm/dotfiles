@@ -42,3 +42,5 @@ if [[ -d $HOME/.pyenv/shims ]]; then
     eval "$(pyenv init -)"
 fi
 export PATH="/usr/local/opt/node@18/bin:$PATH"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
