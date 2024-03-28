@@ -189,7 +189,7 @@ require("lazy").setup({
 		lazy = false, -- load at start
 		priority = 1000, -- load first
 		config = function()
-			vim.cmd([[colorscheme base16-solarized-dark]])
+			vim.cmd([[colorscheme base16-darkmoss]])
 			vim.o.background = 'dark'
 		end
 	},

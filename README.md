@@ -19,8 +19,10 @@ this is not the default shown in the Vundle docs.) E.g. `git clone
 https://github.com/VundleVim/Vundle.vim.git ~/.vundle/Vundle.vim`, then after
 installing the dotfiles, run `:PluginInstall` in vim.
 
-To get the right terminal colors, download Solarized, find
-`iterm2-colors-solarized` and install `Solarized Dark`.
+To get the right terminal colors in iTerm2, go to Settings | Profiles | Colors
+| Color Presets and import
+"base16-iterm2/itermcolors/base16-darkmoss.itermcolors", then select it
+from the list.
 
 
 Dependencies
