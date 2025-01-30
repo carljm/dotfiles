@@ -31,23 +31,20 @@ Dependencies
 Generally, the dotfiles will gracefully handle the absence of these
 dependencies, but make use of them if they are present.
 
-Install with OS package manager:
-  - emacs and vim
+Install with OS package manager / Homebrew:
+  - emacs
+  - vim
+  - neovim
+  - fzf
+  - gpg
+  - gh
+  - rg
 
 Install via their install script
   - nvm
+  - uv
 
 Install with npm/yarn:
   - eslint
 
-Install Rye from rye-up.com
-
 Install Rust toolchain from rustup.rs
-
-Install from Homebrew:
-  - neovim
-  - fzf
-  - gpg
-  - pipx
-  - gh
-  - rg

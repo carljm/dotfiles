@@ -26,7 +26,10 @@ export LDFLAGS="-L/usr/local/opt/zlib/lib -L/usr/local/opt/sqlite/lib -L/usr/loc
 export CPPFLAGS="-I/usr/local/opt/zlib/include -I/usr/local/opt/sqlite/include -I/usr/local/opt/openssl/include"
 export PATH="/usr/local/opt/node@18/bin:$PATH"
 source $HOME/.cargo/env
-eval $(/opt/homebrew/bin/brew shellenv)
+
+if [ -d "/opt/homebrew" ]; then
+  eval $(/opt/homebrew/bin/brew shellenv)
+fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
