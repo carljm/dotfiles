@@ -48,3 +48,6 @@ Install from Homebrew:
   - neovim
   - fzf
   - gpg
+  - pipx
+  - gh
+  - rg

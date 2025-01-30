@@ -26,7 +26,10 @@ export LDFLAGS="-L/usr/local/opt/zlib/lib -L/usr/local/opt/sqlite/lib -L/usr/loc
 export CPPFLAGS="-I/usr/local/opt/zlib/include -I/usr/local/opt/sqlite/include -I/usr/local/opt/openssl/include"
 export PATH="/usr/local/opt/node@18/bin:$PATH"
 source $HOME/.cargo/env
-source $HOME/.rye/env
 eval $(/opt/homebrew/bin/brew shellenv)
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
