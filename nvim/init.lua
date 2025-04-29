@@ -200,6 +200,11 @@ require("lazy").setup({
 		"airblade/vim-gitgutter",
 		lazy = false,
 	},
+	-- fugitive
+	{
+		"tpope/vim-fugitive",
+		lazy = false,
+	},
 	-- nice bar at the bottom
 	{
 		'itchyny/lightline.vim',
@@ -313,6 +318,10 @@ require("lazy").setup({
 		},
 		opts = {},
 	},
+	-- Copilot
+	{
+		'github/copilot.vim',
+	},
 	-- LSP
 	{
 		'neovim/nvim-lspconfig',
@@ -341,6 +350,26 @@ require("lazy").setup({
 					},
 				},
 			}
+
+			-- Python via red-knot
+			local configs = require 'lspconfig.configs'
+			if not configs.red_knot then
+				configs.red_knot = {
+					default_config = {
+						cmd = { 'red_knot', 'server' },
+						filetypes = { 'python' },
+						root_dir = function(fname)
+							return require('lspconfig.util').root_pattern('pyproject.toml', 'knot.toml')(fname)
+							or vim.fs.dirname(vim.fs.find('.git', { path = fname, upward = true })[1])
+						end,
+						single_file_support = true,
+						settings = {},
+					}
+				}
+			end
+			if configs.red_knot then
+				lspconfig.red_knot.setup {}
+			end
 
 			-- Bash LSP
 			local configs = require 'lspconfig.configs'
@@ -382,6 +411,7 @@ require("lazy").setup({
 					local opts = { buffer = ev.buf }
 					vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
 					vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
+					vim.keymap.set('n', 'gT', vim.lsp.buf.type_definition, opts)
 					vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
 					vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opts)
 					vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, opts)
