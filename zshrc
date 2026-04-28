@@ -21,10 +21,6 @@ fi
 
 export GOPATH=$HOME/go
 
-# for compiling Python
-export LDFLAGS="-L/usr/local/opt/zlib/lib -L/usr/local/opt/sqlite/lib -L/usr/local/opt/openssl/lib"
-export CPPFLAGS="-I/usr/local/opt/zlib/include -I/usr/local/opt/sqlite/include -I/usr/local/opt/openssl/include"
-export PATH="/usr/local/opt/node@18/bin:$PATH"
 source $HOME/.cargo/env
 
 if [ -d "/opt/homebrew" ]; then

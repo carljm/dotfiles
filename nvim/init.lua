@@ -205,6 +205,55 @@ require("lazy").setup({
 		"tpope/vim-fugitive",
 		lazy = false,
 	},
+	-- diffview
+	{
+		"sindrets/diffview.nvim",
+	},
+	-- octo
+	{
+		"pwntester/octo.nvim",
+		cmd = "Octo",
+		opts = {
+		  -- or "fzf-lua" or "snacks" or "default"
+		  picker = "telescope",
+		  -- bare Octo command opens picker of commands
+		  enable_builtin = true,
+		},
+		keys = {
+		  {
+		    "<leader>oi",
+		    "<CMD>Octo issue list<CR>",
+		    desc = "List GitHub Issues",
+		  },
+		  {
+		    "<leader>op",
+		    "<CMD>Octo pr list<CR>",
+		    desc = "List GitHub PullRequests",
+		  },
+		  {
+		    "<leader>od",
+		    "<CMD>Octo discussion list<CR>",
+		    desc = "List GitHub Discussions",
+		  },
+		  {
+		    "<leader>on",
+		    "<CMD>Octo notification list<CR>",
+		    desc = "List GitHub Notifications",
+		  },
+		  {
+		    "<leader>os",
+		    function()
+			require("octo.utils").create_base_search_command { include_current_repo = true }
+		    end,
+		    desc = "Search GitHub",
+		  },
+		},
+		dependencies = {
+		  "nvim-lua/plenary.nvim",
+		  "nvim-telescope/telescope.nvim",
+		  "nvim-tree/nvim-web-devicons",
+		},
+	},
 	-- nice bar at the bottom
 	{
 		'itchyny/lightline.vim',
@@ -332,6 +381,9 @@ require("lazy").setup({
 			-- Rust
 			lspconfig.rust_analyzer.setup {
 				-- Server-specific settings. See `:help lspconfig-setup`
+				cmd_env = {
+					CARGO_TARGET_DIR = "/tmp/nvim-ra",
+				},
 				settings = {
 					["rust-analyzer"] = {
 						cargo = {
@@ -351,15 +403,15 @@ require("lazy").setup({
 				},
 			}
 
-			-- Python via red-knot
+			-- Python via ty
 			local configs = require 'lspconfig.configs'
-			if not configs.red_knot then
-				configs.red_knot = {
+			if not configs.ty then
+				configs.ty = {
 					default_config = {
-						cmd = { 'red_knot', 'server' },
+						cmd = { 'ty', 'server' },
 						filetypes = { 'python' },
 						root_dir = function(fname)
-							return require('lspconfig.util').root_pattern('pyproject.toml', 'knot.toml')(fname)
+							return require('lspconfig.util').root_pattern('pyproject.toml', 'ty.toml')(fname)
 							or vim.fs.dirname(vim.fs.find('.git', { path = fname, upward = true })[1])
 						end,
 						single_file_support = true,
@@ -367,8 +419,8 @@ require("lazy").setup({
 					}
 				}
 			end
-			if configs.red_knot then
-				lspconfig.red_knot.setup {}
+			if configs.ty then
+				lspconfig.ty.setup {}
 			end
 
 			-- Bash LSP
@@ -427,6 +479,9 @@ require("lazy").setup({
 					vim.keymap.set('n', '<leader>f', function()
 						vim.lsp.buf.format { async = true }
 					end, opts)
+					vim.keymap.set('i', '<C-space>', function()
+					  vim.lsp.completion.get()
+					end)
 
 					local client = vim.lsp.get_client_by_id(ev.data.client_id)
 
@@ -443,55 +498,6 @@ require("lazy").setup({
 			})
 		end
 	},
-	-- LSP-based code-completion
-	{
-		"hrsh7th/nvim-cmp",
-		-- load cmp on InsertEnter
-		event = "InsertEnter",
-		-- these dependencies will only be loaded when cmp loads
-		-- dependencies are always lazy-loaded unless specified otherwise
-		dependencies = {
-			'neovim/nvim-lspconfig',
-			"hrsh7th/cmp-nvim-lsp",
-			"hrsh7th/cmp-buffer",
-			"hrsh7th/cmp-path",
-		},
-		config = function()
-			local cmp = require'cmp'
-			cmp.setup({
-				snippet = {
-					-- REQUIRED by nvim-cmp. get rid of it once we can
-					expand = function(args)
-						vim.fn["vsnip#anonymous"](args.body)
-					end,
-				},
-				mapping = cmp.mapping.preset.insert({
-					['<C-b>'] = cmp.mapping.scroll_docs(-4),
-					['<C-f>'] = cmp.mapping.scroll_docs(4),
-					['<C-Space>'] = cmp.mapping.complete(),
-					['<C-e>'] = cmp.mapping.abort(),
-					-- Accept currently selected item.
-					-- Set `select` to `false` to only confirm explicitly selected items.
-					['<CR>'] = cmp.mapping.confirm({ select = true }),
-				}),
-				sources = cmp.config.sources({
-					{ name = 'nvim_lsp' },
-				}, {
-					{ name = 'path' },
-				}),
-				experimental = {
-					ghost_text = true,
-				},
-			})
-
-			-- Enable completing paths in :
-			cmp.setup.cmdline(':', {
-				sources = cmp.config.sources({
-					{ name = 'path' }
-				})
-			})
-		end
-	},
 	-- inline function signatures
 	{
 		"ray-x/lsp_signature.nvim",
@@ -505,6 +511,16 @@ require("lazy").setup({
 					border = "none"
 				},
 			})
+		end
+	},
+	-- treesitter-context
+	{
+		'nvim-treesitter/nvim-treesitter-context',
+		config = function()
+			require('treesitter-context').setup {
+				enable = true,
+				max_lines = 5,
+			}
 		end
 	},
 	-- language support
